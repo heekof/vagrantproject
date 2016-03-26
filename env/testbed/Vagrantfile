@@ -1,0 +1,214 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+
+Vagrant.configure(2) do |config|
+
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://atlas.hashicorp.com/search.
+  
+  config.vm.box = "precise32"
+ 
+  
+   
+	config.vbguest.auto_update = false
+
+	#config.vm.provision "file", source: "~/vagrantproject/files/git-config", destination: "~/.git-config"
+	
+
+		
+
+			
+config.vm.provider "virtualbox" do |v|
+
+	v.memory = 2024
+	v.cpus = 2
+	# Can't figure out what is the id
+	#v.customize ["modifyvm", client, "--cpuexecutioncap","70"]		
+	v.linked_clone = true
+end
+			
+			
+config.vm.define "server" do |server|
+
+
+	server.vm.hostname = "server"
+	server.vm.network "private_network", ip: "192.168.50.1",	auto_config: false
+	server.vm.network "private_network", ip: "192.168.50.12",	auto_config: false
+	server.vm.network "private_network", ip: "192.168.50.13",	auto_config: false
+	server.vm.network "forwarded_port", guest: 80, host: 8080
+	server.vm.provision "shell", path: "~/vagrantproject/scripts/node1-interface.sh"
+# to check 
+	#node1.vm.name = "node1"
+
+end
+
+config.vm.define "client"  do |client|
+
+	client.vm.hostname = "client"
+	client.vm.network "private_network", ip: "192.168.50.2",	auto_config: false
+	client.vm.network "private_network", ip: "192.168.50.21",	auto_config: false
+	client.vm.network "private_network", ip: "192.168.50.21",	auto_config: false
+	client.vm.provision "shell", path: "~/vagrantproject/scripts/node2-interface.sh"
+	client.vm.network "forwarded_port", guest: 9090, host: 9090
+	
+
+client.vm.provider :virtualbox do |vb|
+  vb.gui = false
+  vb.name = "client"
+  vb.linked_clone = true
+end
+
+end
+
+# config.vm.define "node3"  do |node3|
+
+	# node3.vm.hostname = "node3"
+	# node3.vm.network "private_network", ip: "192.168.50.3",	auto_config: false
+	# node3.vm.network "private_network", ip: "192.168.50.31",	auto_config: false
+	# node3.vm.network "private_network", ip: "192.168.50.32",	auto_config: false
+	
+	# node3.vm.provision "shell", path: "~/vagrantproject/scripts/node3-interface.sh"
+	
+	# node3.vm.provider :virtualbox do |vb|
+  # vb.gui = false
+  # vb.name = "node3"
+# end
+
+# end
+
+# config.vm.define "node4"  do |node4|
+
+	# node4.vm.hostname = "node4"
+	# node4.vm.network "private_network", ip: "192.168.50.4",	auto_config: false 
+	
+	# node4.vm.network "private_network", ip: "192.168.50.41",	auto_config: false 
+	# node4.vm.network "private_network", ip: "192.168.50.43",	auto_config: false 
+	# node4.vm.provision "shell", path: "~/vagrantproject/scripts/node4-interface.sh"
+	
+	# node4.vm.provider :virtualbox do |vb|
+  # vb.gui = false
+  # vb.name = "node4"
+# end
+
+# end
+
+config.vm.define "node5"  do |node5|
+
+	node5.vm.hostname = "node5"
+	node5.vm.network "private_network", ip: "192.168.50.5",	auto_config: false 
+	
+	node5.vm.network "private_network", ip: "192.168.50.51",	auto_config: false 
+	
+	node5.vm.network "private_network", ip: "192.168.50.52",	auto_config: false 
+	node5.vm.provision "shell", path: "~/vagrantproject/scripts/node5-interface.sh"
+node5.vm.provision "shell", inline: "sudo sysctl -w net.ipv4.ip_forward=1 ; sudo sysctl -p /etc/sysctl.conf"
+
+node5.vm.provider :virtualbox do |vb|
+  vb.gui = false
+  vb.name = "node5"
+vb.linked_clone = true
+end
+
+end
+
+config.vm.define "node6"  do |node6|
+
+	node6.vm.hostname = "node6"
+	node6.vm.network "private_network",  ip: "192.168.50.6",	auto_config: false 
+	node6.vm.network "private_network",  ip: "192.168.50.61",	auto_config: false 
+	node6.vm.network "private_network",  ip: "192.168.50.62",	auto_config: false 
+	node6.vm.provision "shell", path: "~/vagrantproject/scripts/node6-interface.sh"
+	node6.vm.provision "shell", inline: "sudo sysctl -w net.ipv4.ip_forward=1 ; sudo sysctl -p /etc/sysctl.conf"
+	node6.vm.provider :virtualbox do |vb|
+  		vb.gui = false
+  		vb.name = "node6"
+	vb.linked_clone = true
+end
+
+end
+
+# config.vm.define "node7"  do |node7|
+
+	# node7.vm.hostname = "node7"
+	# node7.vm.network "private_network",  ip: "192.168.50.7",	auto_config: false
+	
+	# node7.vm.network "private_network",  ip: "192.168.50.71",	auto_config: false
+	
+	# node7.vm.network "private_network",  ip: "192.168.50.72",	auto_config: false
+	# node7.vm.provision "shell", path: "~/vagrantproject/scripts/node7-interface.sh"
+	# node7.vm.provider :virtualbox do |vb|
+  # vb.gui = false
+  # vb.name = "node7"
+# end
+
+# end
+# config.vm.define "node8"  do |node8|
+
+	# node8.vm.hostname = "node8"
+	# node8.vm.network "private_network",  ip: "192.168.50.8",	auto_config: false 
+	
+	# node8.vm.network "private_network",  ip: "192.168.50.81",	auto_config: false
+	
+	# node8.vm.network "private_network",  ip: "192.168.50.82",	auto_config: false
+	# node8.vm.provision "shell", path: "~/vagrantproject/scripts/node8-interface.sh"
+	# node8.vm.provider :virtualbox do |vb|
+  # vb.gui = false
+  # vb.name = "node8"
+# end
+
+# end
+
+
+config.vm.define "server"  do |server|
+
+	server.vm.hostname = "server"
+	 server.vm.provision "shell", path: "~/vagrantproject/scripts/ubuntu-streaming-server.sh"
+	 server.vm.network "private_network", ip: "192.168.11.11"
+	 server.vm.provider :virtualbox do |vb|
+  vb.gui = false
+  vb.name = "server"
+   vb.linked_clone = true
+end
+
+end
+
+ config.vm.define "web" do |web|
+				 web.vm.hostname = "web-server"
+				 web.vm.network "forwarded_port", guest: 80, host: 8080
+				 web.vm.network "private_network", type: "dhcp" #ip: "192.168.10.2"
+				 # web.vm.provision "shell", path: "https://raw.githubusercontent.com/heekof/vagrant2/master/scripts/centos-web.sh"
+				 web.vm.provision "shell", path: "~/vagrantproject/scripts/ubuntu-web.sh"
+				 
+				 web.vm.provider :virtualbox do |vb|
+  vb.gui = false
+  vb.name = "web"
+vb.linked_clone = true
+				end
+
+			 end
+
+			 
+			 # config.vm.define "db" do |db|
+				 # db.vm.hostname = "database-server"               |
+				 # #db.vm.network "private_network", ip: "192.168.10.3"
+				 # #db.vm.provision "shell", path: "https://raw.githubusercontent.com/heekof/vagrant2/master/scripts/centos-database.sh"
+				 # db.vm.provision "shell", path: "~/vagrantproject/scripts/centos-database.sh"
+				 # db.vm.network "private_network", type: "dhcp"
+				
+			 # end
+
+
+
+
+
+
+
+
+	
+  # SHELL
+end

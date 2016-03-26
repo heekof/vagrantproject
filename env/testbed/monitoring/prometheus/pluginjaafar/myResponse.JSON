@@ -1,0 +1,10 @@
+ss
+apiResponse
+error.log
+
+
+Get_JSON_metric.sh
+get_metric.sh
+
+
+{"status":"success","data":[{"__name__":"up","instance":"localhost:9090","job":"prometheus"},{"__name__":"process_start_time_seconds","instance":"localhost:9090","job":"prometheus"}]}

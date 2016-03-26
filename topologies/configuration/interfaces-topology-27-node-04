@@ -1,0 +1,43 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+# VBoxNetwork: netc
+auto eth1
+iface eth1 inet static
+	address 192.168.3.31
+	netmask 255.255.255.0
+	network 192.168.3.0
+	broadcast 192.168.3.255
+	post-up route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.3.2 dev eth1
+	pre-down route del -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.3.2 dev eth1
+
+# VBoxNetwork: netf
+auto eth2
+iface eth2 inet static
+	address 192.168.6.61
+	netmask 255.255.255.0
+	network 192.168.6.0
+	broadcast 192.168.6.255
+	post-up route add -net 192.168.4.0 netmask 255.255.255.0 gw 192.168.6.2 dev eth2
+	post-up route add -net 192.168.5.0 netmask 255.255.255.0 gw 192.168.6.2 dev eth2
+	pre-down route del -net 192.168.4.0 netmask 255.255.255.0 gw 192.168.6.2 dev eth2
+	pre-down route del -net 192.168.5.0 netmask 255.255.255.0 gw 192.168.6.2 dev eth2
+
+#auto eth3
+#iface eth3 inet static
+#	address 192.168.9.91
+#	netmask 255.255.255.0
+#	network 192.168.9.0
+#	broadcast 192.168.9.255
+#	post-up route add -net 192.168.7.0 netmask 255.255.255.0 gw 192.168.9.2 dev eth3
+#	post-up route add -net 192.168.8.0 netmask 255.255.255.0 gw 192.168.9.2 dev eth3
+#	pre-down route del -net 192.168.7.0 netmask 255.255.255.0 gw 192.168.9.2 dev eth3
+#	pre-down route del -net 192.168.8.0 netmask 255.255.255.0 gw 192.168.9.2 dev eth3
+

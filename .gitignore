@@ -1,0 +1,10 @@
+.vagrant
+boxes
+env/testbed/monitoring/prometheus/consoles/
+env/testbed/monitoring/prometheus/consoles_libraries
+env/testbed/monitoring/prometheus/data
+env/testbed/monitoring/prometheus/consoles/prometheus
+env/testbed/monitoring/prometheus/promotool
+scripts/virtnetscripts/
+env/testbed/Video.mp4
+data
