@@ -61,8 +61,8 @@ TIME_END=$LOCAL_TIME_END
 LOCAL_TT="T"
 LOCAL_ZZ="Z"
 # Using the date command
-LOCAL_RAW_TIME_DATE=$(date --rfc-3339=date --utc --universal)
-LOCAL_RAW_TIME_NS=$(date --rfc-3339=ns --utc --universal)
+LOCAL_RAW_TIME_DATE=$(date --rfc-3339=date  --date='2 minutes' --utc --universal)
+LOCAL_RAW_TIME_NS=$(date --rfc-3339=ns --date='2 minutes' --utc --universal)
 # String Operations
 LOCAL_RAW_TIME_NS=$(echo "${LOCAL_RAW_TIME_NS:11:12}")
 LOCAL_RAW_TIME_DATE=$(echo $LOCAL_RAW_TIME_DATE$LOCAL_TT)
@@ -105,7 +105,7 @@ LOCAL_METRIC="process_virtual_memory_bytes  process_cpu_seconds_total  go_memsta
 go_gc_duration_seconds go_memstats_alloc_bytes go_memstats_mspan_inuse_bytes"
 
 INDEX="1"
-set_time  "STD" "0"
+set_time  "STD" $LOCAL_INTERVAL_MINUTES
 set_time "ADD" $LOCAL_INTERVAL_MINUTES
 
 # 15 seconds
@@ -131,10 +131,11 @@ OUTPUT_FILE="file${INDEX_FILE}"
 					The output file of the API request $M is in ===> $OUTPUT_FILE  
 					"
 
-					#echo "debuggib : M= $M  time start = $TIME_START  step = $STEP  time end= $TIME_END "
+					echo "debuggib : M= $M  time start = $TIME_START  step = $STEP  time end= $TIME_END "
 					# the range from time start to time end accordying to the RFC 3339
-					$(curl -g "http://localhost:9090/api/v1/query_range?query='$M'&start='$TIME_START'&end='$TIME_END'&step='$STEP' -o '$OUTPUT_FILE'")
-					echo " The API request sent is :  http://localhost:9090/api/v1/query_range?query=$M&start=$TIME_START&end=$TIME_END&step=$STEP -o $OUTPUT_FILE "
+					$(curl -g 'http://localhost:9090/api/v1/query_range?query='$M'&start='$TIME_START'&end='$TIME_END'&step='$STEP'' -o ""$OUTPUT_FILE"")
+					#echo " The API request sent is :  http://localhost:9090/api/v1/query_range?query=$M&start=$TIME_START&end=$TIME_END&step=$STEP -o $OUTPUT_FILE "
+					echo "the DEBUG = curl -g 'http://localhost:9090/api/v1/query_range?query=""$M""&start=""$TIME_START""&end=""$TIME_END""&step=""$STEP"" -o ""$OUTPUT_FILE""' "
 					break
 
 					else

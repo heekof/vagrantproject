@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 # the range from time start to time end accordying to the RFC 3339
 #		SET the time range for the API request
@@ -28,9 +28,9 @@ LOCAL_RAW_TIME_NS=$(echo $LOCAL_RAW_TIME_NS$LOCAL_ZZ)
 LOCAL_TIME_START=$(echo $LOCAL_RAW_TIME_DATE$LOCAL_RAW_TIME_NS  )
 
 # Print the result
-TIME_END=$LOCAL_TIME_START
+echo "$LOCAL_TIME_START"
  
-
+ exit 0
  ;;
  
  
@@ -53,8 +53,9 @@ LOCAL_RAW_TIME_NS=$(echo $LOCAL_RAW_TIME_NS$LOCAL_ZZ)
 LOCAL_TIME_START=$(echo $LOCAL_RAW_TIME_DATE$LOCAL_RAW_TIME_NS  )
 
 # Print the result
-TIME_START=$LOCAL_TIME_START
+echo "$LOCAL_TIME_START"
 
+exit 0
      ;;
 
  
@@ -65,14 +66,6 @@ esac
 PARA1=$1
 PARA2=$2
 
-SET_TIME "ADD" $PARA2
-SET_TIME "XXX" $PARA2
-STEP="15s"
-M="process_virtual_memory_bytes"
+ABC=SET_TIME $PARA1 $PARA2
 
-
-echo "
-curl -g 'http://localhost:9090/api/v1/query_range?query=$M&start=$TIME_START&end=$TIME_END&step=$STEP'
-"
-
-$(curl -g 'http://localhost:9090/api/v1/query_range?query='$M'&start='$TIME_START'&end='$TIME_END'&step='$STEP'')
+echo "My var is $ABC"
