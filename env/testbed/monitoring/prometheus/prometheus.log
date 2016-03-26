@@ -1,0 +1,14 @@
+nohup: ignoring input
+prometheus, version 0.17.0 (branch: release-0.17, revision: e11fab3)
+  build user:       fabianreinartz@macpro
+  build date:       20160302-17:48:43
+  go version:       1.5.3
+time="2016-03-26T12:45:23+01:00" level=info msg="Loading configuration file prometheus.yml" source="main.go:202" 
+time="2016-03-26T12:45:23+01:00" level=info msg="Loading series map and head chunks..." source="storage.go:299" 
+time="2016-03-26T12:45:23+01:00" level=info msg="1239 series loaded." source="storage.go:304" 
+time="2016-03-26T12:45:23+01:00" level=info msg="Starting target manager..." source="targetmanager.go:114" 
+time="2016-03-26T12:45:23+01:00" level=info msg="Listening on :9090" source="web.go:239" 
+time="2016-03-26T12:45:23+01:00" level=info msg="Target manager started." source="targetmanager.go:168" 
+time="2016-03-26T12:45:23+01:00" level=warning msg="No AlertManager configured, not dispatching any alerts" source="notification.go:165" 
+time="2016-03-26T12:50:23+01:00" level=info msg="Checkpointing in-memory metrics and chunks..." source="persistence.go:548" 
+time="2016-03-26T12:50:23+01:00" level=info msg="Done checkpointing in-memory metrics and chunks in 165.613501ms." source="persistence.go:572" 
