@@ -26,9 +26,9 @@ echo "
 Your choice was the activation of the mode $OPTION and the argument is $1 ok" 
 }
 
-# the range from time start to time end accordying to the RFC 3339
-#		SET the time range for the API request
-#
+###########################################################################################################
+#		SET the time range for the API request - the range from time start to time end accordying to the RFC 3339
+###########################################################################################################
 function set_time() {
 
 LOCAL_ADDED_MINUTES=$2
@@ -75,6 +75,7 @@ TIME_START=$LOCAL_TIME_START
 esac
 }
 
+
 ###############################################
 # option one
 ###############################################
@@ -101,8 +102,7 @@ OUTPUT_FILE="file${INDEX_FILE}.json"
 LOCAL_INTERVAL_MINUTES=$1
 LOCAL_CMD_RET=$(curl -g 'http://localhost:9090/api/v1/query_range?query=up&start=2016-03-25T22:32:33.641Z&end=2016-03-25T22:52:33.641Z&step=15s -o ${OUTPUT_FILE} > error.log')
 
-LOCAL_METRIC="process_virtual_memory_bytes  process_cpu_seconds_total  go_memstats_next_gc_bytes  prometheus_local_storage_persistence_urgency_score
-go_gc_duration_seconds go_memstats_alloc_bytes go_memstats_mspan_inuse_bytes"
+
 
 INDEX="1"
 set_time  "STD" $LOCAL_INTERVAL_MINUTES
@@ -113,11 +113,11 @@ STEP="15s"
 
 
 
-
-for M in $LOCAL_METRIC 
+LINE_NUM=1
+while read LINE 
 do
 
-echo "the raw metris used are: ==>      $INDEX : $M 
+echo "the raw metris used are: ==>      $INDEX : $LINE 
 "
 
 OUTPUT_FILE="file${INDEX_FILE}.json"
@@ -146,7 +146,8 @@ OUTPUT_FILE="file${INDEX_FILE}.json"
 
 
 ((INDEX++))
-done
+((LINE_NUM++))
+done < ./metrics-inputs
 
 }
 
