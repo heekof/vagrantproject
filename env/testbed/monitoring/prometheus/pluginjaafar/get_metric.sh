@@ -95,7 +95,7 @@ function commands_api_option_two() {
 # CMD_RET=$(curl 'http://localhost:9090/api/v1/query_range?query=up&start=2016-03-25T23:20:00.000Z&end=2016-03-25T23:32:00.000Z&step=15s')
 
 INDEX_FILE="1"
-OUTPUT_FILE="file${INDEX_FILE}"
+OUTPUT_FILE="file${INDEX_FILE}.json"
 # date --rfc-3339=ns --utc --universal
 
 LOCAL_INTERVAL_MINUTES=$1
@@ -120,7 +120,7 @@ do
 echo "the raw metris used are: ==>      $INDEX : $M 
 "
 
-OUTPUT_FILE="file${INDEX_FILE}"
+OUTPUT_FILE="file${INDEX_FILE}.json"
 
 					while true
 					do
@@ -140,7 +140,7 @@ OUTPUT_FILE="file${INDEX_FILE}"
 
 					else
 					((INDEX_FILE++))
-					OUTPUT_FILE="file${INDEX_FILE}"
+					OUTPUT_FILE="file${INDEX_FILE}.json"
 					fi
 					done
 
