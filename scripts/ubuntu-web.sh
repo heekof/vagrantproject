@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+# test
 ping -c 1 8.8.8.8 > /dev/null && apt-get update 
 
 
