@@ -84,7 +84,8 @@ esac
 # option one
 ###############################################
 function commands_api_option_one() {
-CMD_RET=$(curl -g 'http://localhost:9090/api/v1/query_range?query=up&start=2016-03-25T22:32:33.641Z&end=2016-03-25T22:52:33.641Z&step=15s')
+
+$( ${GOPATH}/bin/prom2json  http://192.168.50.1:7071/metrics | jq '.[1]' > file1.json )
 
 }
 
@@ -104,6 +105,7 @@ OUTPUT_FILE="file${INDEX_FILE}.json"
 # date --rfc-3339=ns --utc --universal
 
 LOCAL_INTERVAL_MINUTES=$1
+
 LOCAL_CMD_RET=$(curl -g 'http://localhost:9090/api/v1/query_range?query=up&start=2016-03-25T22:32:33.641Z&end=2016-03-25T22:52:33.641Z&step=15s -o data/${OUTPUT_FILE} > error.log')
 
 
@@ -194,7 +196,8 @@ done
 
 
 start $1
-commands_api_option_two $1 $OPTION
+#commands_api_option_two $1 $OPTION
+commands_api_option_one $1 $OPTION
 
 
 exit 0
