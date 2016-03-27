@@ -104,7 +104,7 @@ OUTPUT_FILE="file${INDEX_FILE}.json"
 # date --rfc-3339=ns --utc --universal
 
 LOCAL_INTERVAL_MINUTES=$1
-LOCAL_CMD_RET=$(curl -g 'http://localhost:9090/api/v1/query_range?query=up&start=2016-03-25T22:32:33.641Z&end=2016-03-25T22:52:33.641Z&step=15s -o ${OUTPUT_FILE} > error.log')
+LOCAL_CMD_RET=$(curl -g 'http://localhost:9090/api/v1/query_range?query=up&start=2016-03-25T22:32:33.641Z&end=2016-03-25T22:52:33.641Z&step=15s -o data/${OUTPUT_FILE} > error.log')
 
 
 

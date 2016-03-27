@@ -1,4 +1,4 @@
 #!/bin/bash 
 
 
-rm -v file*
+rm -v data/file*
