@@ -1,4 +1,0 @@
-#!/bin/bash
-
-curl http://localhost:9090/api/v1/series?match[]=up&match[]=process_start_time_seconds{job="prometheus"}
-
