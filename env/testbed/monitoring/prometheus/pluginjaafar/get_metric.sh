@@ -124,15 +124,15 @@ do
 echo "the raw metris used are: ==>      $INDEX : $LINE 
 "
 
-OUTPUT_FILE="file${INDEX_FILE}.json"
+OUTPUT_FILE="data/file${INDEX_FILE}.json"
 
 					while true
 					do
 					if [  ! -e $OUTPUT_FILE ]; then 
-					echo "create file $OUTPUT_FILE"
-					touch  $OUTPUT_FILE
+					echo "create file data/$OUTPUT_FILE"
+					touch  "data/"${OUTPUT_FILE}
 					echo " 
-					The output file of the API request $LINE is in ===> $OUTPUT_FILE  
+					The output file of the API request $LINE is in ===> data/$OUTPUT_FILE  
 					"
 
 					echo "debuggib : M= $LINE  time start = $TIME_START  step = $STEP  time end= $TIME_END "
@@ -144,7 +144,7 @@ OUTPUT_FILE="file${INDEX_FILE}.json"
 
 					else
 					((INDEX_FILE++))
-					OUTPUT_FILE="file${INDEX_FILE}.json"
+					OUTPUT_FILE="data/file${INDEX_FILE}.json"
 					fi
 					done
 
