@@ -16,14 +16,18 @@ function start(){
 echo "Hello" 
 echo " This Program will allow you to send a group of query to the node you are monitoring and store the response 
 in a JSON file created dynamically as file1, file2, file3, etc. "
-echo " 
-This program has several mode "
-echo " options : 1 - 2 - 3"
-echo "The mode 1 allow you to get basic metrics from the node targerted by prometheus  "
-read -p "Your choice ==> " OPTION 
+
+echo "Insert the host address : <host> "
+read -p "Your choice ==> " HOST
+
+
+echo "Insert the port : <port> "
+read -p "Your choice ==> " PORT
+
 
 echo "
-Your choice was the activation of the mode $OPTION and the argument is $1 ok" 
+The address is $HOST:$PORT  Thank you 
+" 
 }
 
 ###########################################################################################################
@@ -128,14 +132,14 @@ OUTPUT_FILE="file${INDEX_FILE}.json"
 					echo "create file $OUTPUT_FILE"
 					touch  $OUTPUT_FILE
 					echo " 
-					The output file of the API request $M is in ===> $OUTPUT_FILE  
+					The output file of the API request $LINE is in ===> $OUTPUT_FILE  
 					"
 
-					echo "debuggib : M= $M  time start = $TIME_START  step = $STEP  time end= $TIME_END "
+					echo "debuggib : M= $LINE  time start = $TIME_START  step = $STEP  time end= $TIME_END "
 					# the range from time start to time end accordying to the RFC 3339
-					$(curl -g 'http://localhost:9090/api/v1/query_range?query='$M'&start='$TIME_START'&end='$TIME_END'&step='$STEP'' -o ""$OUTPUT_FILE"")
-					#echo " The API request sent is :  http://localhost:9090/api/v1/query_range?query=$M&start=$TIME_START&end=$TIME_END&step=$STEP -o $OUTPUT_FILE "
-					echo "the DEBUG = curl -g 'http://localhost:9090/api/v1/query_range?query=""$M""&start=""$TIME_START""&end=""$TIME_END""&step=""$STEP"" -o ""$OUTPUT_FILE""' "
+					$(curl -g 'http://'$HOST':'$PORT'/api/v1/query_range?query='$LINE'&start='$TIME_START'&end='$TIME_END'&step='$STEP'' -o ""$OUTPUT_FILE"")
+					#echo " The API request sent is :  http://localhost:9090/api/v1/query_range?query=$LINE&start=$TIME_START&end=$TIME_END&step=$STEP -o $OUTPUT_FILE "
+					echo "the DEBUG = curl -g 'http://localhost:9090/api/v1/query_range?query=""$LINE""&start=""$TIME_START""&end=""$TIME_END""&step=""$STEP"" -o ""$OUTPUT_FILE""' "
 					break
 
 					else
@@ -190,37 +194,9 @@ done
 
 
 start $1
-
-case "$OPTION" in
- "1"*|"one")
-
- commands_api_option_one $1
- storage
-
-     ;;
-
- "2"*|"two")
-
-echo "choice 2"
-
-commands_api_option_two $1
-
-;;
-
- "3"*|"three")
-
-echo "choice 3"
-
- ;;
-
-  *)
-echo "Option not supported yet"
-exit 0
-     ;;
-esac
+commands_api_option_two $1 $OPTION
 
 
-# After, I should use a table to gather all my query response
 exit 0
 
 
