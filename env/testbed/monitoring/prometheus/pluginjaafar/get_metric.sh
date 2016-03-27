@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash  -x
 
 set -
 
@@ -18,11 +18,11 @@ echo " This Program will allow you to send a group of query to the node you are 
 in a JSON file created dynamically as file1, file2, file3, etc. "
 
 echo "Insert the host address : <host> "
-read -p "Your choice ==> " HOST
+#read -p "Your choice ==> " HOST
 
 
 echo "Insert the port : <port> "
-read -p "Your choice ==> " PORT
+#read -p "Your choice ==> " PORT
 
 
 echo "
@@ -85,7 +85,55 @@ esac
 ###############################################
 function commands_api_option_one() {
 
-$( ${GOPATH}/bin/prom2json  http://192.168.50.1:7071/metrics | jq '.[1]' > file1.json )
+LINE_NUM=1
+INDEX=1
+INDEX_FILE=1
+while read LINE 
+do
+
+echo "the raw metris used are: ==>      $INDEX : $LINE 
+"
+
+OUTPUT_FILE="data/file${INDEX_FILE}.json"
+
+					while true
+					do
+					if [  ! -e $OUTPUT_FILE ]; then 
+					
+					
+					echo " 
+					$LINE ===> $OUTPUT_FILE
+					"
+					touch  ${OUTPUT_FILE}
+
+					$( ${GOPATH}/bin/prom2json  http://192.168.50.1:7071/metrics | jq '.[]|select(.name=='''$LINE''')'  > $OUTPUT_FILE ) 
+ 					
+					break
+
+					else
+					
+					((INDEX_FILE++))
+					OUTPUT_FILE="data/file${INDEX_FILE}.json"
+					fi
+					done
+
+
+((INDEX++))
+((LINE_NUM++))
+done < ./metrics-inputs
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 

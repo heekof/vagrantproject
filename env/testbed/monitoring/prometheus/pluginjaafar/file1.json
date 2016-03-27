@@ -1,0 +1,10 @@
+{
+  "metrics": [
+    {
+      "value": "1.45909845681e+09"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Start time of the process since unix epoch in seconds.",
+  "name": "process_start_time_seconds"
+}

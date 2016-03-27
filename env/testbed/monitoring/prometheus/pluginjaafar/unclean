@@ -1,856 +1,283 @@
-# HELP go_gc_duration_seconds A summary of the GC invocation durations.
-# TYPE go_gc_duration_seconds summary
-go_gc_duration_seconds{quantile="0"} 0.000872954
-go_gc_duration_seconds{quantile="0.25"} 0.00164133
-go_gc_duration_seconds{quantile="0.5"} 0.001912557
-go_gc_duration_seconds{quantile="0.75"} 0.0023950440000000003
-go_gc_duration_seconds{quantile="1"} 0.003952078
-go_gc_duration_seconds_sum 1.596645021
-go_gc_duration_seconds_count 784
-# HELP go_goroutines Number of goroutines that currently exist.
-# TYPE go_goroutines gauge
-go_goroutines 11
-# HELP http_request_duration_microseconds The HTTP request latencies in microseconds.
-# TYPE http_request_duration_microseconds summary
-http_request_duration_microseconds{handler="prometheus",quantile="0.5"} 14690.005
-http_request_duration_microseconds{handler="prometheus",quantile="0.9"} 19035.955
-http_request_duration_microseconds{handler="prometheus",quantile="0.99"} 20740.52
-http_request_duration_microseconds_sum{handler="prometheus"} 1.5809562033000026e+07
-http_request_duration_microseconds_count{handler="prometheus"} 1033
-# HELP http_request_size_bytes The HTTP request sizes in bytes.
-# TYPE http_request_size_bytes summary
-http_request_size_bytes{handler="prometheus",quantile="0.5"} 308
-http_request_size_bytes{handler="prometheus",quantile="0.9"} 308
-http_request_size_bytes{handler="prometheus",quantile="0.99"} 308
-http_request_size_bytes_sum{handler="prometheus"} 318292
-http_request_size_bytes_count{handler="prometheus"} 1033
-# HELP http_requests_total Total number of HTTP requests made.
-# TYPE http_requests_total counter
-http_requests_total{code="200",handler="prometheus",method="get"} 1033
-# HELP http_response_size_bytes The HTTP response sizes in bytes.
-# TYPE http_response_size_bytes summary
-http_response_size_bytes{handler="prometheus",quantile="0.5"} 6351
-http_response_size_bytes{handler="prometheus",quantile="0.9"} 6361
-http_response_size_bytes{handler="prometheus",quantile="0.99"} 6362
-http_response_size_bytes_sum{handler="prometheus"} 6.559685e+06
-http_response_size_bytes_count{handler="prometheus"} 1033
-# HELP node_boot_time Node boot time, in unixtime.
-# TYPE node_boot_time gauge
-node_boot_time 1.458994875e+09
-# HELP node_context_switches Total number of context switches.
-# TYPE node_context_switches counter
-node_context_switches 1.051312e+06
-# HELP node_cpu Seconds the cpus spent in each mode.
-# TYPE node_cpu counter
-node_cpu{cpu="cpu0",mode="guest"} 0
-node_cpu{cpu="cpu0",mode="idle"} 32067.4
-node_cpu{cpu="cpu0",mode="iowait"} 12.11
-node_cpu{cpu="cpu0",mode="irq"} 9.32
-node_cpu{cpu="cpu0",mode="nice"} 0
-node_cpu{cpu="cpu0",mode="softirq"} 0
-node_cpu{cpu="cpu0",mode="steal"} 0
-node_cpu{cpu="cpu0",mode="system"} 54.04
-node_cpu{cpu="cpu0",mode="user"} 39.64
-node_cpu{cpu="cpu1",mode="guest"} 0
-node_cpu{cpu="cpu1",mode="idle"} 32123.27
-node_cpu{cpu="cpu1",mode="iowait"} 1.66
-node_cpu{cpu="cpu1",mode="irq"} 3.62
-node_cpu{cpu="cpu1",mode="nice"} 0
-node_cpu{cpu="cpu1",mode="softirq"} 0
-node_cpu{cpu="cpu1",mode="steal"} 0
-node_cpu{cpu="cpu1",mode="system"} 36.88
-node_cpu{cpu="cpu1",mode="user"} 10.42
-# HELP node_disk_io_now The number of I/Os currently in progress.
-# TYPE node_disk_io_now gauge
-node_disk_io_now{device="sda"} 0
-node_disk_io_now{device="sr0"} 0
-# HELP node_disk_io_time_ms Milliseconds spent doing I/Os.
-# TYPE node_disk_io_time_ms counter
-node_disk_io_time_ms{device="sda"} 15276
-node_disk_io_time_ms{device="sr0"} 0
-# HELP node_disk_io_time_weighted The weighted # of milliseconds spent doing I/Os. See https://www.kernel.org/doc/Documentation/iostats.txt.
-# TYPE node_disk_io_time_weighted counter
-node_disk_io_time_weighted{device="sda"} 782336
-node_disk_io_time_weighted{device="sr0"} 0
-# HELP node_disk_read_time_ms The total number of milliseconds spent by all reads.
-# TYPE node_disk_read_time_ms counter
-node_disk_read_time_ms{device="sda"} 725988
-node_disk_read_time_ms{device="sr0"} 0
-# HELP node_disk_reads_completed The total number of reads completed successfully.
-# TYPE node_disk_reads_completed counter
-node_disk_reads_completed{device="sda"} 3706
-node_disk_reads_completed{device="sr0"} 0
-# HELP node_disk_reads_merged The number of reads merged. See https://www.kernel.org/doc/Documentation/iostats.txt.
-# TYPE node_disk_reads_merged counter
-node_disk_reads_merged{device="sda"} 1666
-node_disk_reads_merged{device="sr0"} 0
-# HELP node_disk_sectors_read The total number of sectors read successfully.
-# TYPE node_disk_sectors_read counter
-node_disk_sectors_read{device="sda"} 484054
-node_disk_sectors_read{device="sr0"} 0
-# HELP node_disk_sectors_written The total number of sectors written successfully.
-# TYPE node_disk_sectors_written counter
-node_disk_sectors_written{device="sda"} 250528
-node_disk_sectors_written{device="sr0"} 0
-# HELP node_disk_write_time_ms This is the total number of milliseconds spent by all writes.
-# TYPE node_disk_write_time_ms counter
-node_disk_write_time_ms{device="sda"} 56452
-node_disk_write_time_ms{device="sr0"} 0
-# HELP node_disk_writes_completed The total number of writes completed successfully.
-# TYPE node_disk_writes_completed counter
-node_disk_writes_completed{device="sda"} 645
-node_disk_writes_completed{device="sr0"} 0
-# HELP node_disk_writes_merged The number of writes merged. See https://www.kernel.org/doc/Documentation/iostats.txt.
-# TYPE node_disk_writes_merged counter
-node_disk_writes_merged{device="sda"} 379
-node_disk_writes_merged{device="sr0"} 0
-# HELP node_exporter_scrape_duration_seconds node_exporter: Duration of a scrape job.
-# TYPE node_exporter_scrape_duration_seconds summary
-node_exporter_scrape_duration_seconds{collector="diskstats",result="success",quantile="0.5"} 0.000738096
-node_exporter_scrape_duration_seconds{collector="diskstats",result="success",quantile="0.9"} 0.001029362
-node_exporter_scrape_duration_seconds{collector="diskstats",result="success",quantile="0.99"} 0.002022007
-node_exporter_scrape_duration_seconds_sum{collector="diskstats",result="success"} 0.9495061220000013
-node_exporter_scrape_duration_seconds_count{collector="diskstats",result="success"} 1034
-node_exporter_scrape_duration_seconds{collector="filesystem",result="success",quantile="0.5"} 0.000978169
-node_exporter_scrape_duration_seconds{collector="filesystem",result="success",quantile="0.9"} 0.004234934
-node_exporter_scrape_duration_seconds{collector="filesystem",result="success",quantile="0.99"} 0.004760824
-node_exporter_scrape_duration_seconds_sum{collector="filesystem",result="success"} 2.159036875999998
-node_exporter_scrape_duration_seconds_count{collector="filesystem",result="success"} 1034
-node_exporter_scrape_duration_seconds{collector="loadavg",result="success",quantile="0.5"} 0.000162083
-node_exporter_scrape_duration_seconds{collector="loadavg",result="success",quantile="0.9"} 0.00020449400000000002
-node_exporter_scrape_duration_seconds{collector="loadavg",result="success",quantile="0.99"} 0.00035343900000000004
-node_exporter_scrape_duration_seconds_sum{collector="loadavg",result="success"} 0.17187439700000012
-node_exporter_scrape_duration_seconds_count{collector="loadavg",result="success"} 1034
-node_exporter_scrape_duration_seconds{collector="meminfo",result="success",quantile="0.5"} 0.000496296
-node_exporter_scrape_duration_seconds{collector="meminfo",result="success",quantile="0.9"} 0.000615627
-node_exporter_scrape_duration_seconds{collector="meminfo",result="success",quantile="0.99"} 0.0006999080000000001
-node_exporter_scrape_duration_seconds_sum{collector="meminfo",result="success"} 0.5833303000000003
-node_exporter_scrape_duration_seconds_count{collector="meminfo",result="success"} 1034
-node_exporter_scrape_duration_seconds{collector="netdev",result="success",quantile="0.5"} 0.000676162
-node_exporter_scrape_duration_seconds{collector="netdev",result="success",quantile="0.9"} 0.001097115
-node_exporter_scrape_duration_seconds{collector="netdev",result="success",quantile="0.99"} 0.002183864
-node_exporter_scrape_duration_seconds_sum{collector="netdev",result="success"} 0.7738948430000001
-node_exporter_scrape_duration_seconds_count{collector="netdev",result="success"} 1034
-node_exporter_scrape_duration_seconds{collector="netstat",result="success",quantile="0.5"} 0.0007330580000000001
-node_exporter_scrape_duration_seconds{collector="netstat",result="success",quantile="0.9"} 0.001029214
-node_exporter_scrape_duration_seconds{collector="netstat",result="success",quantile="0.99"} 0.002874648
-node_exporter_scrape_duration_seconds_sum{collector="netstat",result="success"} 0.9248041970000005
-node_exporter_scrape_duration_seconds_count{collector="netstat",result="success"} 1034
-node_exporter_scrape_duration_seconds{collector="stat",result="success",quantile="0.5"} 0.000347342
-node_exporter_scrape_duration_seconds{collector="stat",result="success",quantile="0.9"} 0.00040917300000000003
-node_exporter_scrape_duration_seconds{collector="stat",result="success",quantile="0.99"} 0.000563952
-node_exporter_scrape_duration_seconds_sum{collector="stat",result="success"} 0.4145329039999998
-node_exporter_scrape_duration_seconds_count{collector="stat",result="success"} 1034
-node_exporter_scrape_duration_seconds{collector="textfile",result="success",quantile="0.5"} 5.321e-06
-node_exporter_scrape_duration_seconds{collector="textfile",result="success",quantile="0.9"} 6.024e-06
-node_exporter_scrape_duration_seconds{collector="textfile",result="success",quantile="0.99"} 1.8486000000000002e-05
-node_exporter_scrape_duration_seconds_sum{collector="textfile",result="success"} 0.005978427000000003
-node_exporter_scrape_duration_seconds_count{collector="textfile",result="success"} 1034
-node_exporter_scrape_duration_seconds{collector="time",result="success",quantile="0.5"} 1.9465e-05
-node_exporter_scrape_duration_seconds{collector="time",result="success",quantile="0.9"} 2.9412000000000002e-05
-node_exporter_scrape_duration_seconds{collector="time",result="success",quantile="0.99"} 4.6015000000000006e-05
-node_exporter_scrape_duration_seconds_sum{collector="time",result="success"} 0.022234027999999968
-node_exporter_scrape_duration_seconds_count{collector="time",result="success"} 1034
-# HELP node_filesystem_avail Filesystem space available to non-root users in bytes.
-# TYPE node_filesystem_avail gauge
-node_filesystem_avail{device="/dev/disk/by-uuid/64ecdf77-db7b-48a8-9066-abfb837f2e24",fstype="ext4",mountpoint="/"} 3.7806641152e+10
-node_filesystem_avail{device="none",fstype="tmpfs",mountpoint="/run/lock"} 5.24288e+06
-node_filesystem_avail{device="none",fstype="tmpfs",mountpoint="/run/shm"} 1.037008896e+09
-node_filesystem_avail{device="none",fstype="tmpfs",mountpoint="/run/user"} 1.048576e+08
-node_filesystem_avail{device="none",fstype="vboxsf",mountpoint="/vagrant"} 4.2777194496e+10
-node_filesystem_avail{device="rootfs",fstype="rootfs",mountpoint="/"} 3.7806641152e+10
-node_filesystem_avail{device="rpc_pipefs",fstype="rpc_pipefs",mountpoint="/run/rpc_pipefs"} 0
-node_filesystem_avail{device="tmpfs",fstype="tmpfs",mountpoint="/run"} 2.07015936e+08
-# HELP node_filesystem_files Filesystem total file nodes.
-# TYPE node_filesystem_files gauge
-node_filesystem_files{device="/dev/disk/by-uuid/64ecdf77-db7b-48a8-9066-abfb837f2e24",fstype="ext4",mountpoint="/"} 2.588672e+06
-node_filesystem_files{device="none",fstype="tmpfs",mountpoint="/run/lock"} 253176
-node_filesystem_files{device="none",fstype="tmpfs",mountpoint="/run/shm"} 253176
-node_filesystem_files{device="none",fstype="tmpfs",mountpoint="/run/user"} 253176
-node_filesystem_files{device="none",fstype="vboxsf",mountpoint="/vagrant"} 1000
-node_filesystem_files{device="rootfs",fstype="rootfs",mountpoint="/"} 2.588672e+06
-node_filesystem_files{device="rpc_pipefs",fstype="rpc_pipefs",mountpoint="/run/rpc_pipefs"} 0
-node_filesystem_files{device="tmpfs",fstype="tmpfs",mountpoint="/run"} 253176
-# HELP node_filesystem_files_free Filesystem total free file nodes.
-# TYPE node_filesystem_files_free gauge
-node_filesystem_files_free{device="/dev/disk/by-uuid/64ecdf77-db7b-48a8-9066-abfb837f2e24",fstype="ext4",mountpoint="/"} 2.516101e+06
-node_filesystem_files_free{device="none",fstype="tmpfs",mountpoint="/run/lock"} 253175
-node_filesystem_files_free{device="none",fstype="tmpfs",mountpoint="/run/shm"} 253175
-node_filesystem_files_free{device="none",fstype="tmpfs",mountpoint="/run/user"} 253174
-node_filesystem_files_free{device="none",fstype="vboxsf",mountpoint="/vagrant"} 1000
-node_filesystem_files_free{device="rootfs",fstype="rootfs",mountpoint="/"} 2.516101e+06
-node_filesystem_files_free{device="rpc_pipefs",fstype="rpc_pipefs",mountpoint="/run/rpc_pipefs"} 0
-node_filesystem_files_free{device="tmpfs",fstype="tmpfs",mountpoint="/run"} 252830
-# HELP node_filesystem_free Filesystem free space in bytes.
-# TYPE node_filesystem_free gauge
-node_filesystem_free{device="/dev/disk/by-uuid/64ecdf77-db7b-48a8-9066-abfb837f2e24",fstype="ext4",mountpoint="/"} 3.9944003584e+10
-node_filesystem_free{device="none",fstype="tmpfs",mountpoint="/run/lock"} 5.24288e+06
-node_filesystem_free{device="none",fstype="tmpfs",mountpoint="/run/shm"} 1.037008896e+09
-node_filesystem_free{device="none",fstype="tmpfs",mountpoint="/run/user"} 1.048576e+08
-node_filesystem_free{device="none",fstype="vboxsf",mountpoint="/vagrant"} 4.2777194496e+10
-node_filesystem_free{device="rootfs",fstype="rootfs",mountpoint="/"} 3.9944003584e+10
-node_filesystem_free{device="rpc_pipefs",fstype="rpc_pipefs",mountpoint="/run/rpc_pipefs"} 0
-node_filesystem_free{device="tmpfs",fstype="tmpfs",mountpoint="/run"} 2.07015936e+08
-# HELP node_filesystem_size Filesystem size in bytes.
-# TYPE node_filesystem_size gauge
-node_filesystem_size{device="/dev/disk/by-uuid/64ecdf77-db7b-48a8-9066-abfb837f2e24",fstype="ext4",mountpoint="/"} 4.1612050432e+10
-node_filesystem_size{device="none",fstype="tmpfs",mountpoint="/run/lock"} 5.24288e+06
-node_filesystem_size{device="none",fstype="tmpfs",mountpoint="/run/shm"} 1.037008896e+09
-node_filesystem_size{device="none",fstype="tmpfs",mountpoint="/run/user"} 1.048576e+08
-node_filesystem_size{device="none",fstype="vboxsf",mountpoint="/vagrant"} 6.4793505792e+10
-node_filesystem_size{device="rootfs",fstype="rootfs",mountpoint="/"} 4.1612050432e+10
-node_filesystem_size{device="rpc_pipefs",fstype="rpc_pipefs",mountpoint="/run/rpc_pipefs"} 0
-node_filesystem_size{device="tmpfs",fstype="tmpfs",mountpoint="/run"} 2.07405056e+08
-# HELP node_forks Total number of forks.
-# TYPE node_forks counter
-node_forks 1189
-# HELP node_intr Total number of interrupts serviced.
-# TYPE node_intr counter
-node_intr 739878
-# HELP node_load1 1m load average.
-# TYPE node_load1 gauge
-node_load1 0
-# HELP node_memory_Active Active from /proc/meminfo.
-# TYPE node_memory_Active gauge
-node_memory_Active 7.2794112e+07
-# HELP node_memory_Active_anon Active_anon from /proc/meminfo.
-# TYPE node_memory_Active_anon gauge
-node_memory_Active_anon 2.0742144e+07
-# HELP node_memory_Active_file Active_file from /proc/meminfo.
-# TYPE node_memory_Active_file gauge
-node_memory_Active_file 5.2051968e+07
-# HELP node_memory_AnonHugePages AnonHugePages from /proc/meminfo.
-# TYPE node_memory_AnonHugePages gauge
-node_memory_AnonHugePages 6.291456e+06
-# HELP node_memory_AnonPages AnonPages from /proc/meminfo.
-# TYPE node_memory_AnonPages gauge
-node_memory_AnonPages 2.0639744e+07
-# HELP node_memory_Bounce Bounce from /proc/meminfo.
-# TYPE node_memory_Bounce gauge
-node_memory_Bounce 0
-# HELP node_memory_Buffers Buffers from /proc/meminfo.
-# TYPE node_memory_Buffers gauge
-node_memory_Buffers 1.3647872e+07
-# HELP node_memory_Cached Cached from /proc/meminfo.
-# TYPE node_memory_Cached gauge
-node_memory_Cached 2.81919488e+08
-# HELP node_memory_CommitLimit CommitLimit from /proc/meminfo.
-# TYPE node_memory_CommitLimit gauge
-node_memory_CommitLimit 1.57177856e+09
-# HELP node_memory_Committed_AS Committed_AS from /proc/meminfo.
-# TYPE node_memory_Committed_AS gauge
-node_memory_Committed_AS 1.1020288e+08
-# HELP node_memory_DirectMap2M DirectMap2M from /proc/meminfo.
-# TYPE node_memory_DirectMap2M gauge
-node_memory_DirectMap2M 2.069889024e+09
-# HELP node_memory_DirectMap4k DirectMap4k from /proc/meminfo.
-# TYPE node_memory_DirectMap4k gauge
-node_memory_DirectMap4k 5.2363264e+07
-# HELP node_memory_Dirty Dirty from /proc/meminfo.
-# TYPE node_memory_Dirty gauge
-node_memory_Dirty 0
-# HELP node_memory_HardwareCorrupted HardwareCorrupted from /proc/meminfo.
-# TYPE node_memory_HardwareCorrupted gauge
-node_memory_HardwareCorrupted 0
-# HELP node_memory_HugePages_Free HugePages_Free from /proc/meminfo.
-# TYPE node_memory_HugePages_Free gauge
-node_memory_HugePages_Free 0
-# HELP node_memory_HugePages_Rsvd HugePages_Rsvd from /proc/meminfo.
-# TYPE node_memory_HugePages_Rsvd gauge
-node_memory_HugePages_Rsvd 0
-# HELP node_memory_HugePages_Surp HugePages_Surp from /proc/meminfo.
-# TYPE node_memory_HugePages_Surp gauge
-node_memory_HugePages_Surp 0
-# HELP node_memory_HugePages_Total HugePages_Total from /proc/meminfo.
-# TYPE node_memory_HugePages_Total gauge
-node_memory_HugePages_Total 0
-# HELP node_memory_Hugepagesize Hugepagesize from /proc/meminfo.
-# TYPE node_memory_Hugepagesize gauge
-node_memory_Hugepagesize 2.097152e+06
-# HELP node_memory_Inactive Inactive from /proc/meminfo.
-# TYPE node_memory_Inactive gauge
-node_memory_Inactive 2.43417088e+08
-# HELP node_memory_Inactive_anon Inactive_anon from /proc/meminfo.
-# TYPE node_memory_Inactive_anon gauge
-node_memory_Inactive_anon 290816
-# HELP node_memory_Inactive_file Inactive_file from /proc/meminfo.
-# TYPE node_memory_Inactive_file gauge
-node_memory_Inactive_file 2.43126272e+08
-# HELP node_memory_KernelStack KernelStack from /proc/meminfo.
-# TYPE node_memory_KernelStack gauge
-node_memory_KernelStack 745472
-# HELP node_memory_Mapped Mapped from /proc/meminfo.
-# TYPE node_memory_Mapped gauge
-node_memory_Mapped 9.342976e+06
-# HELP node_memory_MemFree MemFree from /proc/meminfo.
-# TYPE node_memory_MemFree gauge
-node_memory_MemFree 1.709142016e+09
-# HELP node_memory_MemTotal MemTotal from /proc/meminfo.
-# TYPE node_memory_MemTotal gauge
-node_memory_MemTotal 2.074021888e+09
-# HELP node_memory_Mlocked Mlocked from /proc/meminfo.
-# TYPE node_memory_Mlocked gauge
-node_memory_Mlocked 0
-# HELP node_memory_NFS_Unstable NFS_Unstable from /proc/meminfo.
-# TYPE node_memory_NFS_Unstable gauge
-node_memory_NFS_Unstable 0
-# HELP node_memory_PageTables PageTables from /proc/meminfo.
-# TYPE node_memory_PageTables gauge
-node_memory_PageTables 1.59744e+06
-# HELP node_memory_SReclaimable SReclaimable from /proc/meminfo.
-# TYPE node_memory_SReclaimable gauge
-node_memory_SReclaimable 1.2988416e+07
-# HELP node_memory_SUnreclaim SUnreclaim from /proc/meminfo.
-# TYPE node_memory_SUnreclaim gauge
-node_memory_SUnreclaim 9.027584e+06
-# HELP node_memory_Shmem Shmem from /proc/meminfo.
-# TYPE node_memory_Shmem gauge
-node_memory_Shmem 393216
-# HELP node_memory_Slab Slab from /proc/meminfo.
-# TYPE node_memory_Slab gauge
-node_memory_Slab 2.2016e+07
-# HELP node_memory_SwapCached SwapCached from /proc/meminfo.
-# TYPE node_memory_SwapCached gauge
-node_memory_SwapCached 0
-# HELP node_memory_SwapFree SwapFree from /proc/meminfo.
-# TYPE node_memory_SwapFree gauge
-node_memory_SwapFree 5.34769664e+08
-# HELP node_memory_SwapTotal SwapTotal from /proc/meminfo.
-# TYPE node_memory_SwapTotal gauge
-node_memory_SwapTotal 5.34769664e+08
-# HELP node_memory_Unevictable Unevictable from /proc/meminfo.
-# TYPE node_memory_Unevictable gauge
-node_memory_Unevictable 0
-# HELP node_memory_VmallocChunk VmallocChunk from /proc/meminfo.
-# TYPE node_memory_VmallocChunk gauge
-node_memory_VmallocChunk 3.5184337477632e+13
-# HELP node_memory_VmallocTotal VmallocTotal from /proc/meminfo.
-# TYPE node_memory_VmallocTotal gauge
-node_memory_VmallocTotal 3.5184372087808e+13
-# HELP node_memory_VmallocUsed VmallocUsed from /proc/meminfo.
-# TYPE node_memory_VmallocUsed gauge
-node_memory_VmallocUsed 2.8987392e+07
-# HELP node_memory_Writeback Writeback from /proc/meminfo.
-# TYPE node_memory_Writeback gauge
-node_memory_Writeback 0
-# HELP node_memory_WritebackTmp WritebackTmp from /proc/meminfo.
-# TYPE node_memory_WritebackTmp gauge
-node_memory_WritebackTmp 0
-# HELP node_netstat_IcmpMsg_InType0 IcmpMsg InType0 from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IcmpMsg_InType0 gauge
-node_netstat_IcmpMsg_InType0 4
-# HELP node_netstat_IcmpMsg_OutType8 IcmpMsg OutType8 from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IcmpMsg_OutType8 gauge
-node_netstat_IcmpMsg_OutType8 4
-# HELP node_netstat_Icmp_InAddrMaskReps Icmp InAddrMaskReps from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InAddrMaskReps gauge
-node_netstat_Icmp_InAddrMaskReps 0
-# HELP node_netstat_Icmp_InAddrMasks Icmp InAddrMasks from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InAddrMasks gauge
-node_netstat_Icmp_InAddrMasks 0
-# HELP node_netstat_Icmp_InCsumErrors Icmp InCsumErrors from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InCsumErrors gauge
-node_netstat_Icmp_InCsumErrors 0
-# HELP node_netstat_Icmp_InDestUnreachs Icmp InDestUnreachs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InDestUnreachs gauge
-node_netstat_Icmp_InDestUnreachs 0
-# HELP node_netstat_Icmp_InEchoReps Icmp InEchoReps from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InEchoReps gauge
-node_netstat_Icmp_InEchoReps 4
-# HELP node_netstat_Icmp_InEchos Icmp InEchos from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InEchos gauge
-node_netstat_Icmp_InEchos 0
-# HELP node_netstat_Icmp_InErrors Icmp InErrors from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InErrors gauge
-node_netstat_Icmp_InErrors 0
-# HELP node_netstat_Icmp_InMsgs Icmp InMsgs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InMsgs gauge
-node_netstat_Icmp_InMsgs 4
-# HELP node_netstat_Icmp_InParmProbs Icmp InParmProbs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InParmProbs gauge
-node_netstat_Icmp_InParmProbs 0
-# HELP node_netstat_Icmp_InRedirects Icmp InRedirects from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InRedirects gauge
-node_netstat_Icmp_InRedirects 0
-# HELP node_netstat_Icmp_InSrcQuenchs Icmp InSrcQuenchs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InSrcQuenchs gauge
-node_netstat_Icmp_InSrcQuenchs 0
-# HELP node_netstat_Icmp_InTimeExcds Icmp InTimeExcds from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InTimeExcds gauge
-node_netstat_Icmp_InTimeExcds 0
-# HELP node_netstat_Icmp_InTimestampReps Icmp InTimestampReps from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InTimestampReps gauge
-node_netstat_Icmp_InTimestampReps 0
-# HELP node_netstat_Icmp_InTimestamps Icmp InTimestamps from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_InTimestamps gauge
-node_netstat_Icmp_InTimestamps 0
-# HELP node_netstat_Icmp_OutAddrMaskReps Icmp OutAddrMaskReps from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutAddrMaskReps gauge
-node_netstat_Icmp_OutAddrMaskReps 0
-# HELP node_netstat_Icmp_OutAddrMasks Icmp OutAddrMasks from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutAddrMasks gauge
-node_netstat_Icmp_OutAddrMasks 0
-# HELP node_netstat_Icmp_OutDestUnreachs Icmp OutDestUnreachs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutDestUnreachs gauge
-node_netstat_Icmp_OutDestUnreachs 0
-# HELP node_netstat_Icmp_OutEchoReps Icmp OutEchoReps from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutEchoReps gauge
-node_netstat_Icmp_OutEchoReps 0
-# HELP node_netstat_Icmp_OutEchos Icmp OutEchos from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutEchos gauge
-node_netstat_Icmp_OutEchos 4
-# HELP node_netstat_Icmp_OutErrors Icmp OutErrors from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutErrors gauge
-node_netstat_Icmp_OutErrors 0
-# HELP node_netstat_Icmp_OutMsgs Icmp OutMsgs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutMsgs gauge
-node_netstat_Icmp_OutMsgs 4
-# HELP node_netstat_Icmp_OutParmProbs Icmp OutParmProbs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutParmProbs gauge
-node_netstat_Icmp_OutParmProbs 0
-# HELP node_netstat_Icmp_OutRedirects Icmp OutRedirects from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutRedirects gauge
-node_netstat_Icmp_OutRedirects 0
-# HELP node_netstat_Icmp_OutSrcQuenchs Icmp OutSrcQuenchs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutSrcQuenchs gauge
-node_netstat_Icmp_OutSrcQuenchs 0
-# HELP node_netstat_Icmp_OutTimeExcds Icmp OutTimeExcds from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutTimeExcds gauge
-node_netstat_Icmp_OutTimeExcds 0
-# HELP node_netstat_Icmp_OutTimestampReps Icmp OutTimestampReps from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutTimestampReps gauge
-node_netstat_Icmp_OutTimestampReps 0
-# HELP node_netstat_Icmp_OutTimestamps Icmp OutTimestamps from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Icmp_OutTimestamps gauge
-node_netstat_Icmp_OutTimestamps 0
-# HELP node_netstat_IpExt_InBcastOctets IpExt InBcastOctets from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_InBcastOctets gauge
-node_netstat_IpExt_InBcastOctets 0
-# HELP node_netstat_IpExt_InBcastPkts IpExt InBcastPkts from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_InBcastPkts gauge
-node_netstat_IpExt_InBcastPkts 0
-# HELP node_netstat_IpExt_InCEPkts IpExt InCEPkts from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_InCEPkts gauge
-node_netstat_IpExt_InCEPkts 0
-# HELP node_netstat_IpExt_InCsumErrors IpExt InCsumErrors from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_InCsumErrors gauge
-node_netstat_IpExt_InCsumErrors 0
-# HELP node_netstat_IpExt_InECT0Pkts IpExt InECT0Pkts from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_InECT0Pkts gauge
-node_netstat_IpExt_InECT0Pkts 0
-# HELP node_netstat_IpExt_InECT1Pkts IpExt InECT1Pkts from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_InECT1Pkts gauge
-node_netstat_IpExt_InECT1Pkts 0
-# HELP node_netstat_IpExt_InMcastOctets IpExt InMcastOctets from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_InMcastOctets gauge
-node_netstat_IpExt_InMcastOctets 0
-# HELP node_netstat_IpExt_InMcastPkts IpExt InMcastPkts from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_InMcastPkts gauge
-node_netstat_IpExt_InMcastPkts 0
-# HELP node_netstat_IpExt_InNoECTPkts IpExt InNoECTPkts from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_InNoECTPkts gauge
-node_netstat_IpExt_InNoECTPkts 22646
-# HELP node_netstat_IpExt_InNoRoutes IpExt InNoRoutes from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_InNoRoutes gauge
-node_netstat_IpExt_InNoRoutes 5
-# HELP node_netstat_IpExt_InOctets IpExt InOctets from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_InOctets gauge
-node_netstat_IpExt_InOctets 6.306359e+06
-# HELP node_netstat_IpExt_InTruncatedPkts IpExt InTruncatedPkts from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_InTruncatedPkts gauge
-node_netstat_IpExt_InTruncatedPkts 0
-# HELP node_netstat_IpExt_OutBcastOctets IpExt OutBcastOctets from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_OutBcastOctets gauge
-node_netstat_IpExt_OutBcastOctets 0
-# HELP node_netstat_IpExt_OutBcastPkts IpExt OutBcastPkts from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_OutBcastPkts gauge
-node_netstat_IpExt_OutBcastPkts 0
-# HELP node_netstat_IpExt_OutMcastOctets IpExt OutMcastOctets from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_OutMcastOctets gauge
-node_netstat_IpExt_OutMcastOctets 0
-# HELP node_netstat_IpExt_OutMcastPkts IpExt OutMcastPkts from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_OutMcastPkts gauge
-node_netstat_IpExt_OutMcastPkts 0
-# HELP node_netstat_IpExt_OutOctets IpExt OutOctets from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_IpExt_OutOctets gauge
-node_netstat_IpExt_OutOctets 1.4873467e+07
-# HELP node_netstat_Ip_DefaultTTL Ip DefaultTTL from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_DefaultTTL gauge
-node_netstat_Ip_DefaultTTL 64
-# HELP node_netstat_Ip_ForwDatagrams Ip ForwDatagrams from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_ForwDatagrams gauge
-node_netstat_Ip_ForwDatagrams 0
-# HELP node_netstat_Ip_Forwarding Ip Forwarding from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_Forwarding gauge
-node_netstat_Ip_Forwarding 2
-# HELP node_netstat_Ip_FragCreates Ip FragCreates from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_FragCreates gauge
-node_netstat_Ip_FragCreates 0
-# HELP node_netstat_Ip_FragFails Ip FragFails from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_FragFails gauge
-node_netstat_Ip_FragFails 0
-# HELP node_netstat_Ip_FragOKs Ip FragOKs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_FragOKs gauge
-node_netstat_Ip_FragOKs 0
-# HELP node_netstat_Ip_InAddrErrors Ip InAddrErrors from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_InAddrErrors gauge
-node_netstat_Ip_InAddrErrors 0
-# HELP node_netstat_Ip_InDelivers Ip InDelivers from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_InDelivers gauge
-node_netstat_Ip_InDelivers 19454
-# HELP node_netstat_Ip_InDiscards Ip InDiscards from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_InDiscards gauge
-node_netstat_Ip_InDiscards 0
-# HELP node_netstat_Ip_InHdrErrors Ip InHdrErrors from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_InHdrErrors gauge
-node_netstat_Ip_InHdrErrors 0
-# HELP node_netstat_Ip_InReceives Ip InReceives from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_InReceives gauge
-node_netstat_Ip_InReceives 19459
-# HELP node_netstat_Ip_InUnknownProtos Ip InUnknownProtos from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_InUnknownProtos gauge
-node_netstat_Ip_InUnknownProtos 0
-# HELP node_netstat_Ip_OutDiscards Ip OutDiscards from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_OutDiscards gauge
-node_netstat_Ip_OutDiscards 0
-# HELP node_netstat_Ip_OutNoRoutes Ip OutNoRoutes from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_OutNoRoutes gauge
-node_netstat_Ip_OutNoRoutes 0
-# HELP node_netstat_Ip_OutRequests Ip OutRequests from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_OutRequests gauge
-node_netstat_Ip_OutRequests 19061
-# HELP node_netstat_Ip_ReasmFails Ip ReasmFails from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_ReasmFails gauge
-node_netstat_Ip_ReasmFails 0
-# HELP node_netstat_Ip_ReasmOKs Ip ReasmOKs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_ReasmOKs gauge
-node_netstat_Ip_ReasmOKs 0
-# HELP node_netstat_Ip_ReasmReqds Ip ReasmReqds from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_ReasmReqds gauge
-node_netstat_Ip_ReasmReqds 0
-# HELP node_netstat_Ip_ReasmTimeout Ip ReasmTimeout from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Ip_ReasmTimeout gauge
-node_netstat_Ip_ReasmTimeout 0
-# HELP node_netstat_TcpExt_ArpFilter TcpExt ArpFilter from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_ArpFilter gauge
-node_netstat_TcpExt_ArpFilter 0
-# HELP node_netstat_TcpExt_BusyPollRxPackets TcpExt BusyPollRxPackets from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_BusyPollRxPackets gauge
-node_netstat_TcpExt_BusyPollRxPackets 0
-# HELP node_netstat_TcpExt_DelayedACKLocked TcpExt DelayedACKLocked from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_DelayedACKLocked gauge
-node_netstat_TcpExt_DelayedACKLocked 0
-# HELP node_netstat_TcpExt_DelayedACKLost TcpExt DelayedACKLost from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_DelayedACKLost gauge
-node_netstat_TcpExt_DelayedACKLost 0
-# HELP node_netstat_TcpExt_DelayedACKs TcpExt DelayedACKs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_DelayedACKs gauge
-node_netstat_TcpExt_DelayedACKs 16
-# HELP node_netstat_TcpExt_EmbryonicRsts TcpExt EmbryonicRsts from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_EmbryonicRsts gauge
-node_netstat_TcpExt_EmbryonicRsts 0
-# HELP node_netstat_TcpExt_IPReversePathFilter TcpExt IPReversePathFilter from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_IPReversePathFilter gauge
-node_netstat_TcpExt_IPReversePathFilter 0
-# HELP node_netstat_TcpExt_ListenDrops TcpExt ListenDrops from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_ListenDrops gauge
-node_netstat_TcpExt_ListenDrops 0
-# HELP node_netstat_TcpExt_ListenOverflows TcpExt ListenOverflows from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_ListenOverflows gauge
-node_netstat_TcpExt_ListenOverflows 0
-# HELP node_netstat_TcpExt_LockDroppedIcmps TcpExt LockDroppedIcmps from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_LockDroppedIcmps gauge
-node_netstat_TcpExt_LockDroppedIcmps 0
-# HELP node_netstat_TcpExt_OfoPruned TcpExt OfoPruned from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_OfoPruned gauge
-node_netstat_TcpExt_OfoPruned 0
-# HELP node_netstat_TcpExt_OutOfWindowIcmps TcpExt OutOfWindowIcmps from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_OutOfWindowIcmps gauge
-node_netstat_TcpExt_OutOfWindowIcmps 0
-# HELP node_netstat_TcpExt_PAWSActive TcpExt PAWSActive from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_PAWSActive gauge
-node_netstat_TcpExt_PAWSActive 0
-# HELP node_netstat_TcpExt_PAWSEstab TcpExt PAWSEstab from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_PAWSEstab gauge
-node_netstat_TcpExt_PAWSEstab 0
-# HELP node_netstat_TcpExt_PAWSPassive TcpExt PAWSPassive from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_PAWSPassive gauge
-node_netstat_TcpExt_PAWSPassive 0
-# HELP node_netstat_TcpExt_PruneCalled TcpExt PruneCalled from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_PruneCalled gauge
-node_netstat_TcpExt_PruneCalled 0
-# HELP node_netstat_TcpExt_RcvPruned TcpExt RcvPruned from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_RcvPruned gauge
-node_netstat_TcpExt_RcvPruned 0
-# HELP node_netstat_TcpExt_SyncookiesFailed TcpExt SyncookiesFailed from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_SyncookiesFailed gauge
-node_netstat_TcpExt_SyncookiesFailed 0
-# HELP node_netstat_TcpExt_SyncookiesRecv TcpExt SyncookiesRecv from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_SyncookiesRecv gauge
-node_netstat_TcpExt_SyncookiesRecv 0
-# HELP node_netstat_TcpExt_SyncookiesSent TcpExt SyncookiesSent from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_SyncookiesSent gauge
-node_netstat_TcpExt_SyncookiesSent 0
-# HELP node_netstat_TcpExt_TCPAbortFailed TcpExt TCPAbortFailed from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPAbortFailed gauge
-node_netstat_TcpExt_TCPAbortFailed 0
-# HELP node_netstat_TcpExt_TCPAbortOnClose TcpExt TCPAbortOnClose from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPAbortOnClose gauge
-node_netstat_TcpExt_TCPAbortOnClose 0
-# HELP node_netstat_TcpExt_TCPAbortOnData TcpExt TCPAbortOnData from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPAbortOnData gauge
-node_netstat_TcpExt_TCPAbortOnData 0
-# HELP node_netstat_TcpExt_TCPAbortOnLinger TcpExt TCPAbortOnLinger from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPAbortOnLinger gauge
-node_netstat_TcpExt_TCPAbortOnLinger 0
-# HELP node_netstat_TcpExt_TCPAbortOnMemory TcpExt TCPAbortOnMemory from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPAbortOnMemory gauge
-node_netstat_TcpExt_TCPAbortOnMemory 0
-# HELP node_netstat_TcpExt_TCPAbortOnTimeout TcpExt TCPAbortOnTimeout from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPAbortOnTimeout gauge
-node_netstat_TcpExt_TCPAbortOnTimeout 0
-# HELP node_netstat_TcpExt_TCPBacklogDrop TcpExt TCPBacklogDrop from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPBacklogDrop gauge
-node_netstat_TcpExt_TCPBacklogDrop 0
-# HELP node_netstat_TcpExt_TCPChallengeACK TcpExt TCPChallengeACK from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPChallengeACK gauge
-node_netstat_TcpExt_TCPChallengeACK 0
-# HELP node_netstat_TcpExt_TCPDSACKIgnoredNoUndo TcpExt TCPDSACKIgnoredNoUndo from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPDSACKIgnoredNoUndo gauge
-node_netstat_TcpExt_TCPDSACKIgnoredNoUndo 0
-# HELP node_netstat_TcpExt_TCPDSACKIgnoredOld TcpExt TCPDSACKIgnoredOld from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPDSACKIgnoredOld gauge
-node_netstat_TcpExt_TCPDSACKIgnoredOld 0
-# HELP node_netstat_TcpExt_TCPDSACKOfoRecv TcpExt TCPDSACKOfoRecv from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPDSACKOfoRecv gauge
-node_netstat_TcpExt_TCPDSACKOfoRecv 0
-# HELP node_netstat_TcpExt_TCPDSACKOfoSent TcpExt TCPDSACKOfoSent from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPDSACKOfoSent gauge
-node_netstat_TcpExt_TCPDSACKOfoSent 0
-# HELP node_netstat_TcpExt_TCPDSACKOldSent TcpExt TCPDSACKOldSent from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPDSACKOldSent gauge
-node_netstat_TcpExt_TCPDSACKOldSent 0
-# HELP node_netstat_TcpExt_TCPDSACKRecv TcpExt TCPDSACKRecv from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPDSACKRecv gauge
-node_netstat_TcpExt_TCPDSACKRecv 0
-# HELP node_netstat_TcpExt_TCPDSACKUndo TcpExt TCPDSACKUndo from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPDSACKUndo gauge
-node_netstat_TcpExt_TCPDSACKUndo 0
-# HELP node_netstat_TcpExt_TCPDeferAcceptDrop TcpExt TCPDeferAcceptDrop from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPDeferAcceptDrop gauge
-node_netstat_TcpExt_TCPDeferAcceptDrop 0
-# HELP node_netstat_TcpExt_TCPDirectCopyFromBacklog TcpExt TCPDirectCopyFromBacklog from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPDirectCopyFromBacklog gauge
-node_netstat_TcpExt_TCPDirectCopyFromBacklog 0
-# HELP node_netstat_TcpExt_TCPDirectCopyFromPrequeue TcpExt TCPDirectCopyFromPrequeue from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPDirectCopyFromPrequeue gauge
-node_netstat_TcpExt_TCPDirectCopyFromPrequeue 0
-# HELP node_netstat_TcpExt_TCPFACKReorder TcpExt TCPFACKReorder from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPFACKReorder gauge
-node_netstat_TcpExt_TCPFACKReorder 0
-# HELP node_netstat_TcpExt_TCPFastOpenActive TcpExt TCPFastOpenActive from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPFastOpenActive gauge
-node_netstat_TcpExt_TCPFastOpenActive 0
-# HELP node_netstat_TcpExt_TCPFastOpenCookieReqd TcpExt TCPFastOpenCookieReqd from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPFastOpenCookieReqd gauge
-node_netstat_TcpExt_TCPFastOpenCookieReqd 0
-# HELP node_netstat_TcpExt_TCPFastOpenListenOverflow TcpExt TCPFastOpenListenOverflow from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPFastOpenListenOverflow gauge
-node_netstat_TcpExt_TCPFastOpenListenOverflow 0
-# HELP node_netstat_TcpExt_TCPFastOpenPassive TcpExt TCPFastOpenPassive from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPFastOpenPassive gauge
-node_netstat_TcpExt_TCPFastOpenPassive 0
-# HELP node_netstat_TcpExt_TCPFastOpenPassiveFail TcpExt TCPFastOpenPassiveFail from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPFastOpenPassiveFail gauge
-node_netstat_TcpExt_TCPFastOpenPassiveFail 0
-# HELP node_netstat_TcpExt_TCPFastRetrans TcpExt TCPFastRetrans from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPFastRetrans gauge
-node_netstat_TcpExt_TCPFastRetrans 0
-# HELP node_netstat_TcpExt_TCPForwardRetrans TcpExt TCPForwardRetrans from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPForwardRetrans gauge
-node_netstat_TcpExt_TCPForwardRetrans 0
-# HELP node_netstat_TcpExt_TCPFullUndo TcpExt TCPFullUndo from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPFullUndo gauge
-node_netstat_TcpExt_TCPFullUndo 0
-# HELP node_netstat_TcpExt_TCPHPAcks TcpExt TCPHPAcks from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPHPAcks gauge
-node_netstat_TcpExt_TCPHPAcks 6947
-# HELP node_netstat_TcpExt_TCPHPHits TcpExt TCPHPHits from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPHPHits gauge
-node_netstat_TcpExt_TCPHPHits 1250
-# HELP node_netstat_TcpExt_TCPHPHitsToUser TcpExt TCPHPHitsToUser from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPHPHitsToUser gauge
-node_netstat_TcpExt_TCPHPHitsToUser 0
-# HELP node_netstat_TcpExt_TCPLossFailures TcpExt TCPLossFailures from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPLossFailures gauge
-node_netstat_TcpExt_TCPLossFailures 0
-# HELP node_netstat_TcpExt_TCPLossProbeRecovery TcpExt TCPLossProbeRecovery from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPLossProbeRecovery gauge
-node_netstat_TcpExt_TCPLossProbeRecovery 0
-# HELP node_netstat_TcpExt_TCPLossProbes TcpExt TCPLossProbes from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPLossProbes gauge
-node_netstat_TcpExt_TCPLossProbes 0
-# HELP node_netstat_TcpExt_TCPLossUndo TcpExt TCPLossUndo from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPLossUndo gauge
-node_netstat_TcpExt_TCPLossUndo 0
-# HELP node_netstat_TcpExt_TCPLostRetransmit TcpExt TCPLostRetransmit from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPLostRetransmit gauge
-node_netstat_TcpExt_TCPLostRetransmit 0
-# HELP node_netstat_TcpExt_TCPMD5NotFound TcpExt TCPMD5NotFound from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPMD5NotFound gauge
-node_netstat_TcpExt_TCPMD5NotFound 0
-# HELP node_netstat_TcpExt_TCPMD5Unexpected TcpExt TCPMD5Unexpected from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPMD5Unexpected gauge
-node_netstat_TcpExt_TCPMD5Unexpected 0
-# HELP node_netstat_TcpExt_TCPMemoryPressures TcpExt TCPMemoryPressures from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPMemoryPressures gauge
-node_netstat_TcpExt_TCPMemoryPressures 0
-# HELP node_netstat_TcpExt_TCPMinTTLDrop TcpExt TCPMinTTLDrop from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPMinTTLDrop gauge
-node_netstat_TcpExt_TCPMinTTLDrop 0
-# HELP node_netstat_TcpExt_TCPOFODrop TcpExt TCPOFODrop from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPOFODrop gauge
-node_netstat_TcpExt_TCPOFODrop 0
-# HELP node_netstat_TcpExt_TCPOFOMerge TcpExt TCPOFOMerge from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPOFOMerge gauge
-node_netstat_TcpExt_TCPOFOMerge 0
-# HELP node_netstat_TcpExt_TCPOFOQueue TcpExt TCPOFOQueue from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPOFOQueue gauge
-node_netstat_TcpExt_TCPOFOQueue 0
-# HELP node_netstat_TcpExt_TCPPartialUndo TcpExt TCPPartialUndo from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPPartialUndo gauge
-node_netstat_TcpExt_TCPPartialUndo 0
-# HELP node_netstat_TcpExt_TCPPrequeueDropped TcpExt TCPPrequeueDropped from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPPrequeueDropped gauge
-node_netstat_TcpExt_TCPPrequeueDropped 0
-# HELP node_netstat_TcpExt_TCPPrequeued TcpExt TCPPrequeued from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPPrequeued gauge
-node_netstat_TcpExt_TCPPrequeued 1
-# HELP node_netstat_TcpExt_TCPPureAcks TcpExt TCPPureAcks from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPPureAcks gauge
-node_netstat_TcpExt_TCPPureAcks 4562
-# HELP node_netstat_TcpExt_TCPRcvCoalesce TcpExt TCPRcvCoalesce from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPRcvCoalesce gauge
-node_netstat_TcpExt_TCPRcvCoalesce 177
-# HELP node_netstat_TcpExt_TCPRcvCollapsed TcpExt TCPRcvCollapsed from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPRcvCollapsed gauge
-node_netstat_TcpExt_TCPRcvCollapsed 0
-# HELP node_netstat_TcpExt_TCPRenoFailures TcpExt TCPRenoFailures from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPRenoFailures gauge
-node_netstat_TcpExt_TCPRenoFailures 0
-# HELP node_netstat_TcpExt_TCPRenoRecovery TcpExt TCPRenoRecovery from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPRenoRecovery gauge
-node_netstat_TcpExt_TCPRenoRecovery 0
-# HELP node_netstat_TcpExt_TCPRenoRecoveryFail TcpExt TCPRenoRecoveryFail from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPRenoRecoveryFail gauge
-node_netstat_TcpExt_TCPRenoRecoveryFail 0
-# HELP node_netstat_TcpExt_TCPRenoReorder TcpExt TCPRenoReorder from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPRenoReorder gauge
-node_netstat_TcpExt_TCPRenoReorder 0
-# HELP node_netstat_TcpExt_TCPReqQFullDoCookies TcpExt TCPReqQFullDoCookies from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPReqQFullDoCookies gauge
-node_netstat_TcpExt_TCPReqQFullDoCookies 0
-# HELP node_netstat_TcpExt_TCPReqQFullDrop TcpExt TCPReqQFullDrop from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPReqQFullDrop gauge
-node_netstat_TcpExt_TCPReqQFullDrop 0
-# HELP node_netstat_TcpExt_TCPRetransFail TcpExt TCPRetransFail from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPRetransFail gauge
-node_netstat_TcpExt_TCPRetransFail 0
-# HELP node_netstat_TcpExt_TCPSACKDiscard TcpExt TCPSACKDiscard from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSACKDiscard gauge
-node_netstat_TcpExt_TCPSACKDiscard 0
-# HELP node_netstat_TcpExt_TCPSACKReneging TcpExt TCPSACKReneging from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSACKReneging gauge
-node_netstat_TcpExt_TCPSACKReneging 0
-# HELP node_netstat_TcpExt_TCPSACKReorder TcpExt TCPSACKReorder from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSACKReorder gauge
-node_netstat_TcpExt_TCPSACKReorder 0
-# HELP node_netstat_TcpExt_TCPSYNChallenge TcpExt TCPSYNChallenge from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSYNChallenge gauge
-node_netstat_TcpExt_TCPSYNChallenge 0
-# HELP node_netstat_TcpExt_TCPSackFailures TcpExt TCPSackFailures from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSackFailures gauge
-node_netstat_TcpExt_TCPSackFailures 0
-# HELP node_netstat_TcpExt_TCPSackMerged TcpExt TCPSackMerged from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSackMerged gauge
-node_netstat_TcpExt_TCPSackMerged 0
-# HELP node_netstat_TcpExt_TCPSackRecovery TcpExt TCPSackRecovery from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSackRecovery gauge
-node_netstat_TcpExt_TCPSackRecovery 0
-# HELP node_netstat_TcpExt_TCPSackRecoveryFail TcpExt TCPSackRecoveryFail from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSackRecoveryFail gauge
-node_netstat_TcpExt_TCPSackRecoveryFail 0
-# HELP node_netstat_TcpExt_TCPSackShiftFallback TcpExt TCPSackShiftFallback from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSackShiftFallback gauge
-node_netstat_TcpExt_TCPSackShiftFallback 0
-# HELP node_netstat_TcpExt_TCPSackShifted TcpExt TCPSackShifted from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSackShifted gauge
-node_netstat_TcpExt_TCPSackShifted 0
-# HELP node_netstat_TcpExt_TCPSchedulerFailed TcpExt TCPSchedulerFailed from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSchedulerFailed gauge
-node_netstat_TcpExt_TCPSchedulerFailed 0
-# HELP node_netstat_TcpExt_TCPSlowStartRetrans TcpExt TCPSlowStartRetrans from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSlowStartRetrans gauge
-node_netstat_TcpExt_TCPSlowStartRetrans 0
-# HELP node_netstat_TcpExt_TCPSpuriousRTOs TcpExt TCPSpuriousRTOs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSpuriousRTOs gauge
-node_netstat_TcpExt_TCPSpuriousRTOs 0
-# HELP node_netstat_TcpExt_TCPSpuriousRtxHostQueues TcpExt TCPSpuriousRtxHostQueues from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPSpuriousRtxHostQueues gauge
-node_netstat_TcpExt_TCPSpuriousRtxHostQueues 0
-# HELP node_netstat_TcpExt_TCPTSReorder TcpExt TCPTSReorder from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPTSReorder gauge
-node_netstat_TcpExt_TCPTSReorder 0
-# HELP node_netstat_TcpExt_TCPTimeWaitOverflow TcpExt TCPTimeWaitOverflow from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPTimeWaitOverflow gauge
-node_netstat_TcpExt_TCPTimeWaitOverflow 0
-# HELP node_netstat_TcpExt_TCPTimeouts TcpExt TCPTimeouts from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TCPTimeouts gauge
-node_netstat_TcpExt_TCPTimeouts 0
-# HELP node_netstat_TcpExt_TW TcpExt TW from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TW gauge
-node_netstat_TcpExt_TW 2122
-# HELP node_netstat_TcpExt_TWKilled TcpExt TWKilled from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TWKilled gauge
-node_netstat_TcpExt_TWKilled 0
-# HELP node_netstat_TcpExt_TWRecycled TcpExt TWRecycled from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_TcpExt_TWRecycled gauge
-node_netstat_TcpExt_TWRecycled 0
-# HELP node_netstat_Tcp_ActiveOpens Tcp ActiveOpens from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_ActiveOpens gauge
-node_netstat_Tcp_ActiveOpens 2
-# HELP node_netstat_Tcp_AttemptFails Tcp AttemptFails from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_AttemptFails gauge
-node_netstat_Tcp_AttemptFails 0
-# HELP node_netstat_Tcp_CurrEstab Tcp CurrEstab from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_CurrEstab gauge
-node_netstat_Tcp_CurrEstab 1
-# HELP node_netstat_Tcp_EstabResets Tcp EstabResets from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_EstabResets gauge
-node_netstat_Tcp_EstabResets 0
-# HELP node_netstat_Tcp_InCsumErrors Tcp InCsumErrors from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_InCsumErrors gauge
-node_netstat_Tcp_InCsumErrors 0
-# HELP node_netstat_Tcp_InErrs Tcp InErrs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_InErrs gauge
-node_netstat_Tcp_InErrs 0
-# HELP node_netstat_Tcp_InSegs Tcp InSegs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_InSegs gauge
-node_netstat_Tcp_InSegs 19426
-# HELP node_netstat_Tcp_MaxConn Tcp MaxConn from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_MaxConn gauge
-node_netstat_Tcp_MaxConn -1
-# HELP node_netstat_Tcp_OutRsts Tcp OutRsts from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_OutRsts gauge
-node_netstat_Tcp_OutRsts 6
-# HELP node_netstat_Tcp_OutSegs Tcp OutSegs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_OutSegs gauge
-node_netstat_Tcp_OutSegs 21178
-# HELP node_netstat_Tcp_PassiveOpens Tcp PassiveOpens from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_PassiveOpens gauge
-node_netstat_Tcp_PassiveOpens 2135
-# HELP node_netstat_Tcp_RetransSegs Tcp RetransSegs from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_RetransSegs gauge
-node_netstat_Tcp_RetransSegs 0
-# HELP node_netstat_Tcp_RtoAlgorithm Tcp RtoAlgorithm from /proc/net/{netstat,snmp}.
-# TYPE node_netstat_Tcp_RtoAlgorithm gauge
+"go_gc_duration_seconds"
+"go_goroutines"
+"http_request_duration_microseconds"
+"http_request_size_bytes"
+"http_requests_total"
+"http_response_size_bytes"
+"node_boot_time"
+"node_context_switches"
+"node_cpu"
+"node_disk_io_now"
+"node_disk_io_time_ms"
+"node_disk_io_time_weighted"
+"node_disk_read_time_ms"
+"node_disk_reads_completed"
+"node_disk_reads_merged"
+"node_disk_sectors_read"
+"node_disk_sectors_written"
+"node_disk_write_time_ms"
+"node_disk_writes_completed"
+"node_disk_writes_merged"
+"node_exporter_scrape_duration_seconds"
+"node_filesystem_avail"
+"node_filesystem_files"
+"node_filesystem_files_free"
+"node_filesystem_free"
+"node_filesystem_size"
+"node_forks"
+"node_intr"
+"node_load1"
+"node_memory_Active"
+"node_memory_Active_anon"
+"node_memory_Active_file"
+"node_memory_AnonHugePages"
+"node_memory_AnonPages"
+"node_memory_Bounce"
+"node_memory_Buffers"
+"node_memory_Cached"
+"node_memory_CommitLimit"
+"node_memory_Committed_AS"
+"node_memory_DirectMap2M"
+"node_memory_DirectMap4k"
+"node_memory_Dirty"
+"node_memory_HardwareCorrupted"
+"node_memory_HugePages_Free"
+"node_memory_HugePages_Rsvd"
+"node_memory_HugePages_Surp"
+"node_memory_HugePages_Total"
+"node_memory_Hugepagesize"
+"node_memory_Inactive"
+"node_memory_Inactive_anon"
+"node_memory_Inactive_file"
+"node_memory_KernelStack"
+"node_memory_Mapped"
+"node_memory_MemFree"
+"node_memory_MemTotal"
+"node_memory_Mlocked"
+"node_memory_NFS_Unstable"
+"node_memory_PageTables"
+"node_memory_SReclaimable"
+"node_memory_SUnreclaim"
+"node_memory_Shmem"
+"node_memory_Slab"
+"node_memory_SwapCached"
+"node_memory_SwapFree"
+"node_memory_SwapTotal"
+"node_memory_Unevictable"
+"node_memory_VmallocChunk"
+"node_memory_VmallocTotal"
+"node_memory_VmallocUsed"
+"node_memory_Writeback"
+"node_memory_WritebackTmp"
+"node_netstat_Icmp_InAddrMaskReps"
+"node_netstat_Icmp_InAddrMasks"
+"node_netstat_Icmp_InCsumErrors"
+"node_netstat_Icmp_InDestUnreachs"
+"node_netstat_Icmp_InEchoReps"
+"node_netstat_Icmp_InEchos"
+"node_netstat_Icmp_InErrors"
+"node_netstat_Icmp_InMsgs"
+"node_netstat_Icmp_InParmProbs"
+"node_netstat_Icmp_InRedirects"
+"node_netstat_Icmp_InSrcQuenchs"
+"node_netstat_Icmp_InTimeExcds"
+"node_netstat_Icmp_InTimestampReps"
+"node_netstat_Icmp_InTimestamps"
+"node_netstat_Icmp_OutAddrMaskReps"
+"node_netstat_Icmp_OutAddrMasks"
+"node_netstat_Icmp_OutDestUnreachs"
+"node_netstat_Icmp_OutEchoReps"
+"node_netstat_Icmp_OutEchos"
+"node_netstat_Icmp_OutErrors"
+"node_netstat_Icmp_OutMsgs"
+"node_netstat_Icmp_OutParmProbs"
+"node_netstat_Icmp_OutRedirects"
+"node_netstat_Icmp_OutSrcQuenchs"
+"node_netstat_Icmp_OutTimeExcds"
+"node_netstat_Icmp_OutTimestampReps"
+"node_netstat_Icmp_OutTimestamps"
+"node_netstat_IpExt_InBcastOctets"
+"node_netstat_IpExt_InBcastPkts"
+"node_netstat_IpExt_InCEPkts"
+"node_netstat_IpExt_InCsumErrors"
+"node_netstat_IpExt_InECT0Pkts"
+"node_netstat_IpExt_InECT1Pkts"
+"node_netstat_IpExt_InMcastOctets"
+"node_netstat_IpExt_InMcastPkts"
+"node_netstat_IpExt_InNoECTPkts"
+"node_netstat_IpExt_InNoRoutes"
+"node_netstat_IpExt_InOctets"
+"node_netstat_IpExt_InTruncatedPkts"
+"node_netstat_IpExt_OutBcastOctets"
+"node_netstat_IpExt_OutBcastPkts"
+"node_netstat_IpExt_OutMcastOctets"
+"node_netstat_IpExt_OutMcastPkts"
+"node_netstat_IpExt_OutOctets"
+"node_netstat_Ip_DefaultTTL"
+"node_netstat_Ip_ForwDatagrams"
+"node_netstat_Ip_Forwarding"
+"node_netstat_Ip_FragCreates"
+"node_netstat_Ip_FragFails"
+"node_netstat_Ip_FragOKs"
+"node_netstat_Ip_InAddrErrors"
+"node_netstat_Ip_InDelivers"
+"node_netstat_Ip_InDiscards"
+"node_netstat_Ip_InHdrErrors"
+"node_netstat_Ip_InReceives"
+"node_netstat_Ip_InUnknownProtos"
+"node_netstat_Ip_OutDiscards"
+"node_netstat_Ip_OutNoRoutes"
+"node_netstat_Ip_OutRequests"
+"node_netstat_Ip_ReasmFails"
+"node_netstat_Ip_ReasmOKs"
+"node_netstat_Ip_ReasmReqds"
+"node_netstat_Ip_ReasmTimeout"
+"node_netstat_TcpExt_ArpFilter"
+"node_netstat_TcpExt_BusyPollRxPackets"
+"node_netstat_TcpExt_DelayedACKLocked"
+"node_netstat_TcpExt_DelayedACKLost"
+"node_netstat_TcpExt_DelayedACKs"
+"node_netstat_TcpExt_EmbryonicRsts"
+"node_netstat_TcpExt_IPReversePathFilter"
+"node_netstat_TcpExt_ListenDrops"
+"node_netstat_TcpExt_ListenOverflows"
+"node_netstat_TcpExt_LockDroppedIcmps"
+"node_netstat_TcpExt_OfoPruned"
+"node_netstat_TcpExt_OutOfWindowIcmps"
+"node_netstat_TcpExt_PAWSActive"
+"node_netstat_TcpExt_PAWSEstab"
+"node_netstat_TcpExt_PAWSPassive"
+"node_netstat_TcpExt_PruneCalled"
+"node_netstat_TcpExt_RcvPruned"
+"node_netstat_TcpExt_SyncookiesFailed"
+"node_netstat_TcpExt_SyncookiesRecv"
+"node_netstat_TcpExt_SyncookiesSent"
+"node_netstat_TcpExt_TCPAbortFailed"
+"node_netstat_TcpExt_TCPAbortOnClose"
+"node_netstat_TcpExt_TCPAbortOnData"
+"node_netstat_TcpExt_TCPAbortOnLinger"
+"node_netstat_TcpExt_TCPAbortOnMemory"
+"node_netstat_TcpExt_TCPAbortOnTimeout"
+"node_netstat_TcpExt_TCPBacklogDrop"
+"node_netstat_TcpExt_TCPChallengeACK"
+"node_netstat_TcpExt_TCPDSACKIgnoredNoUndo"
+"node_netstat_TcpExt_TCPDSACKIgnoredOld"
+"node_netstat_TcpExt_TCPDSACKOfoRecv"
+"node_netstat_TcpExt_TCPDSACKOfoSent"
+"node_netstat_TcpExt_TCPDSACKOldSent"
+"node_netstat_TcpExt_TCPDSACKRecv"
+"node_netstat_TcpExt_TCPDSACKUndo"
+"node_netstat_TcpExt_TCPDeferAcceptDrop"
+"node_netstat_TcpExt_TCPDirectCopyFromBacklog"
+"node_netstat_TcpExt_TCPDirectCopyFromPrequeue"
+"node_netstat_TcpExt_TCPFACKReorder"
+"node_netstat_TcpExt_TCPFastOpenActive"
+"node_netstat_TcpExt_TCPFastOpenCookieReqd"
+"node_netstat_TcpExt_TCPFastOpenListenOverflow"
+"node_netstat_TcpExt_TCPFastOpenPassive"
+"node_netstat_TcpExt_TCPFastOpenPassiveFail"
+"node_netstat_TcpExt_TCPFastRetrans"
+"node_netstat_TcpExt_TCPForwardRetrans"
+"node_netstat_TcpExt_TCPFullUndo"
+"node_netstat_TcpExt_TCPHPAcks"
+"node_netstat_TcpExt_TCPHPHits"
+"node_netstat_TcpExt_TCPHPHitsToUser"
+"node_netstat_TcpExt_TCPLossFailures"
+"node_netstat_TcpExt_TCPLossProbeRecovery"
+"node_netstat_TcpExt_TCPLossProbes"
+"node_netstat_TcpExt_TCPLossUndo"
+"node_netstat_TcpExt_TCPLostRetransmit"
+"node_netstat_TcpExt_TCPMD5NotFound"
+"node_netstat_TcpExt_TCPMD5Unexpected"
+"node_netstat_TcpExt_TCPMemoryPressures"
+"node_netstat_TcpExt_TCPMinTTLDrop"
+"node_netstat_TcpExt_TCPOFODrop"
+"node_netstat_TcpExt_TCPOFOMerge"
+"node_netstat_TcpExt_TCPOFOQueue"
+"node_netstat_TcpExt_TCPPartialUndo"
+"node_netstat_TcpExt_TCPPrequeueDropped"
+"node_netstat_TcpExt_TCPPrequeued"
+"node_netstat_TcpExt_TCPPureAcks"
+"node_netstat_TcpExt_TCPRcvCoalesce"
+"node_netstat_TcpExt_TCPRcvCollapsed"
+"node_netstat_TcpExt_TCPRenoFailures"
+"node_netstat_TcpExt_TCPRenoRecovery"
+"node_netstat_TcpExt_TCPRenoRecoveryFail"
+"node_netstat_TcpExt_TCPRenoReorder"
+"node_netstat_TcpExt_TCPReqQFullDoCookies"
+"node_netstat_TcpExt_TCPReqQFullDrop"
+"node_netstat_TcpExt_TCPRetransFail"
+"node_netstat_TcpExt_TCPSACKDiscard"
+"node_netstat_TcpExt_TCPSACKReneging"
+"node_netstat_TcpExt_TCPSACKReorder"
+"node_netstat_TcpExt_TCPSYNChallenge"
+"node_netstat_TcpExt_TCPSackFailures"
+"node_netstat_TcpExt_TCPSackMerged"
+"node_netstat_TcpExt_TCPSackRecovery"
+"node_netstat_TcpExt_TCPSackRecoveryFail"
+"node_netstat_TcpExt_TCPSackShiftFallback"
+"node_netstat_TcpExt_TCPSackShifted"
+"node_netstat_TcpExt_TCPSchedulerFailed"
+"node_netstat_TcpExt_TCPSlowStartRetrans"
+"node_netstat_TcpExt_TCPSpuriousRTOs"
+"node_netstat_TcpExt_TCPSpuriousRtxHostQueues"
+"node_netstat_TcpExt_TCPTSReorder"
+"node_netstat_TcpExt_TCPTimeWaitOverflow"
+"node_netstat_TcpExt_TCPTimeouts"
+"node_netstat_TcpExt_TW"
+"node_netstat_TcpExt_TWKilled"
+"node_netstat_TcpExt_TWRecycled"
+"node_netstat_Tcp_ActiveOpens"
+"node_netstat_Tcp_AttemptFails"
+"node_netstat_Tcp_CurrEstab"
+"node_netstat_Tcp_EstabResets"
+"node_netstat_Tcp_InCsumErrors"
+"node_netstat_Tcp_InErrs"
+"node_netstat_Tcp_InSegs"
+"node_netstat_Tcp_MaxConn"
+"node_netstat_Tcp_OutRsts"
+"node_netstat_Tcp_OutSegs"
+"node_netstat_Tcp_PassiveOpens"
+"node_netstat_Tcp_RetransSegs"
+"node_netstat_Tcp_RtoAlgorithm"
+"node_netstat_Tcp_RtoMax"
+"node_netstat_Tcp_RtoMin"
+"node_netstat_UdpLite_InCsumErrors"
+"node_netstat_UdpLite_InDatagrams"
+"node_netstat_UdpLite_InErrors"
+"node_netstat_UdpLite_NoPorts"
+"node_netstat_UdpLite_OutDatagrams"
+"node_netstat_UdpLite_RcvbufErrors"
+"node_netstat_UdpLite_SndbufErrors"
+"node_netstat_Udp_InCsumErrors"
+"node_netstat_Udp_InDatagrams"
+"node_netstat_Udp_InErrors"
+"node_netstat_Udp_NoPorts"
+"node_netstat_Udp_OutDatagrams"
+"node_netstat_Udp_RcvbufErrors"
+"node_netstat_Udp_SndbufErrors"
+"node_network_receive_bytes"
+"node_network_receive_compressed"
+"node_network_receive_drop"
+"node_network_receive_errs"
+"node_network_receive_fifo"
+"node_network_receive_frame"
+"node_network_receive_multicast"
+"node_network_receive_packets"
+"node_network_transmit_bytes"
+"node_network_transmit_compressed"
+"node_network_transmit_drop"
+"node_network_transmit_errs"
+"node_network_transmit_fifo"
+"node_network_transmit_frame"
+"node_network_transmit_multicast"
+"node_network_transmit_packets"
+"node_procs_blocked"
+"node_procs_running"
+"node_time"
+"process_cpu_seconds_total"
+"process_max_fds"
+"process_open_fds"
+"process_resident_memory_bytes"
+"process_start_time_seconds"
+"process_virtual_memory_bytes"
