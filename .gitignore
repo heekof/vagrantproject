@@ -8,4 +8,5 @@ env/testbed/monitoring/prometheus/promotool
 scripts/virtnetscripts/
 env/testbed/Video.mp4
 data
-env/testbed/monitoring/prometheus/nodeexporter/
+env/testbed/monitoring/prometheus/nodeexporter
+env/testbed/monitoring/prometheus/pluginjaafar/data

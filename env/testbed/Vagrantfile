@@ -56,7 +56,7 @@ config.vm.define "client"  do |client|
 	client.vm.provision "shell", path: "~/vagrantproject/scripts/node2-interface.sh"
 	client.vm.network "forwarded_port", guest: 9090, host: 7070
 	client.vm.network "forwarded_port", guest: 9100, host: 7071
-	
+	client.vm.network "forwarded_port", guest: 8000, host: 7072
 
 client.vm.provider :virtualbox do |vb|
   vb.gui = false

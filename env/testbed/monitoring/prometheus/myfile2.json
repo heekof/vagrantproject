@@ -1,0 +1,3943 @@
+{
+  "metrics": [
+    {
+      "sum": "0.35320158900000004",
+      "count": "173",
+      "quantiles": {
+        "1": "0.003821",
+        "0.75": "0.002431046",
+        "0.5": "0.002132578",
+        "0.25": "0.0016373770000000002",
+        "0": "0.000557352"
+      }
+    }
+  ],
+  "type": "SUMMARY",
+  "help": "A summary of the GC invocation durations.",
+  "name": "go_gc_duration_seconds"
+}
+{
+  "metrics": [
+    {
+      "value": "13"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Number of goroutines that currently exist.",
+  "name": "go_goroutines"
+}
+{
+  "metrics": [
+    {
+      "sum": "3.487465137999999e+06",
+      "count": "220",
+      "quantiles": {
+        "0.99": "20236.369",
+        "0.9": "18884.959",
+        "0.5": "16480.359"
+      },
+      "labels": {
+        "handler": "prometheus"
+      }
+    }
+  ],
+  "type": "SUMMARY",
+  "help": "The HTTP request latencies in microseconds.",
+  "name": "http_request_duration_microseconds"
+}
+{
+  "metrics": [
+    {
+      "sum": "67536",
+      "count": "220",
+      "quantiles": {
+        "0.99": "308",
+        "0.9": "308",
+        "0.5": "308"
+      },
+      "labels": {
+        "handler": "prometheus"
+      }
+    }
+  ],
+  "type": "SUMMARY",
+  "help": "The HTTP request sizes in bytes.",
+  "name": "http_request_size_bytes"
+}
+{
+  "metrics": [
+    {
+      "value": "220",
+      "labels": {
+        "method": "get",
+        "handler": "prometheus",
+        "code": "200"
+      }
+    }
+  ],
+  "type": "COUNTER",
+  "help": "Total number of HTTP requests made.",
+  "name": "http_requests_total"
+}
+{
+  "metrics": [
+    {
+      "sum": "1.379437e+06",
+      "count": "220",
+      "quantiles": {
+        "0.99": "6280",
+        "0.9": "6278",
+        "0.5": "6272"
+      },
+      "labels": {
+        "handler": "prometheus"
+      }
+    }
+  ],
+  "type": "SUMMARY",
+  "help": "The HTTP response sizes in bytes.",
+  "name": "http_response_size_bytes"
+}
+{
+  "metrics": [
+    {
+      "value": "1.459098407e+09"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Node boot time, in unixtime.",
+  "name": "node_boot_time"
+}
+{
+  "metrics": [
+    {
+      "value": "153984"
+    }
+  ],
+  "type": "COUNTER",
+  "help": "Total number of context switches.",
+  "name": "node_context_switches"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "mode": "guest",
+        "cpu": "cpu0"
+      }
+    },
+    {
+      "value": "3279.29",
+      "labels": {
+        "mode": "idle",
+        "cpu": "cpu0"
+      }
+    },
+    {
+      "value": "7.98",
+      "labels": {
+        "mode": "iowait",
+        "cpu": "cpu0"
+      }
+    },
+    {
+      "value": "1.2",
+      "labels": {
+        "mode": "irq",
+        "cpu": "cpu0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "mode": "nice",
+        "cpu": "cpu0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "mode": "softirq",
+        "cpu": "cpu0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "mode": "steal",
+        "cpu": "cpu0"
+      }
+    },
+    {
+      "value": "8.5",
+      "labels": {
+        "mode": "system",
+        "cpu": "cpu0"
+      }
+    },
+    {
+      "value": "5.87",
+      "labels": {
+        "mode": "user",
+        "cpu": "cpu0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "mode": "guest",
+        "cpu": "cpu1"
+      }
+    },
+    {
+      "value": "3290.26",
+      "labels": {
+        "mode": "idle",
+        "cpu": "cpu1"
+      }
+    },
+    {
+      "value": "1.45",
+      "labels": {
+        "mode": "iowait",
+        "cpu": "cpu1"
+      }
+    },
+    {
+      "value": "0.52",
+      "labels": {
+        "mode": "irq",
+        "cpu": "cpu1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "mode": "nice",
+        "cpu": "cpu1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "mode": "softirq",
+        "cpu": "cpu1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "mode": "steal",
+        "cpu": "cpu1"
+      }
+    },
+    {
+      "value": "7.17",
+      "labels": {
+        "mode": "system",
+        "cpu": "cpu1"
+      }
+    },
+    {
+      "value": "2.96",
+      "labels": {
+        "mode": "user",
+        "cpu": "cpu1"
+      }
+    }
+  ],
+  "type": "COUNTER",
+  "help": "Seconds the cpus spent in each mode.",
+  "name": "node_cpu"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "sda"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "sr0"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "The number of I/Os currently in progress.",
+  "name": "node_disk_io_now"
+}
+{
+  "metrics": [
+    {
+      "value": "11532",
+      "labels": {
+        "device": "sda"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "sr0"
+      }
+    }
+  ],
+  "type": "COUNTER",
+  "help": "Milliseconds spent doing I/Os.",
+  "name": "node_disk_io_time_ms"
+}
+{
+  "metrics": [
+    {
+      "value": "678560",
+      "labels": {
+        "device": "sda"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "sr0"
+      }
+    }
+  ],
+  "type": "COUNTER",
+  "help": "The weighted # of milliseconds spent doing I/Os. See https://www.kernel.org/doc/Documentation/iostats.txt.",
+  "name": "node_disk_io_time_weighted"
+}
+{
+  "metrics": [
+    {
+      "value": "678476",
+      "labels": {
+        "device": "sda"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "sr0"
+      }
+    }
+  ],
+  "type": "COUNTER",
+  "help": "The total number of milliseconds spent by all reads.",
+  "name": "node_disk_read_time_ms"
+}
+{
+  "metrics": [
+    {
+      "value": "3029",
+      "labels": {
+        "device": "sda"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "sr0"
+      }
+    }
+  ],
+  "type": "COUNTER",
+  "help": "The total number of reads completed successfully.",
+  "name": "node_disk_reads_completed"
+}
+{
+  "metrics": [
+    {
+      "value": "1659",
+      "labels": {
+        "device": "sda"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "sr0"
+      }
+    }
+  ],
+  "type": "COUNTER",
+  "help": "The number of reads merged. See https://www.kernel.org/doc/Documentation/iostats.txt.",
+  "name": "node_disk_reads_merged"
+}
+{
+  "metrics": [
+    {
+      "value": "466238",
+      "labels": {
+        "device": "sda"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "sr0"
+      }
+    }
+  ],
+  "type": "COUNTER",
+  "help": "The total number of sectors read successfully.",
+  "name": "node_disk_sectors_read"
+}
+{
+  "metrics": [
+    {
+      "value": "4736",
+      "labels": {
+        "device": "sda"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "sr0"
+      }
+    }
+  ],
+  "type": "COUNTER",
+  "help": "The total number of sectors written successfully.",
+  "name": "node_disk_sectors_written"
+}
+{
+  "metrics": [
+    {
+      "value": "152",
+      "labels": {
+        "device": "sda"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "sr0"
+      }
+    }
+  ],
+  "type": "COUNTER",
+  "help": "This is the total number of milliseconds spent by all writes.",
+  "name": "node_disk_write_time_ms"
+}
+{
+  "metrics": [
+    {
+      "value": "185",
+      "labels": {
+        "device": "sda"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "sr0"
+      }
+    }
+  ],
+  "type": "COUNTER",
+  "help": "The total number of writes completed successfully.",
+  "name": "node_disk_writes_completed"
+}
+{
+  "metrics": [
+    {
+      "value": "337",
+      "labels": {
+        "device": "sda"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "sr0"
+      }
+    }
+  ],
+  "type": "COUNTER",
+  "help": "The number of writes merged. See https://www.kernel.org/doc/Documentation/iostats.txt.",
+  "name": "node_disk_writes_merged"
+}
+{
+  "metrics": [
+    {
+      "sum": "0.19928218299999995",
+      "count": "221",
+      "quantiles": {
+        "0.99": "0.002166901",
+        "0.9": "0.001131634",
+        "0.5": "0.000797871"
+      },
+      "labels": {
+        "result": "success",
+        "collector": "diskstats"
+      }
+    },
+    {
+      "sum": "0.4194562269999999",
+      "count": "221",
+      "quantiles": {
+        "0.99": "0.00583364",
+        "0.9": "0.005284742",
+        "0.5": "0.001226567"
+      },
+      "labels": {
+        "result": "success",
+        "collector": "filesystem"
+      }
+    },
+    {
+      "sum": "0.037125139000000015",
+      "count": "221",
+      "quantiles": {
+        "0.99": "0.000259302",
+        "0.9": "0.00019053",
+        "0.5": "0.00015876600000000002"
+      },
+      "labels": {
+        "result": "success",
+        "collector": "loadavg"
+      }
+    },
+    {
+      "sum": "0.13390647500000002",
+      "count": "221",
+      "quantiles": {
+        "0.99": "0.002098773",
+        "0.9": "0.000768628",
+        "0.5": "0.0005176790000000001"
+      },
+      "labels": {
+        "result": "success",
+        "collector": "meminfo"
+      }
+    },
+    {
+      "sum": "0.1713981769999999",
+      "count": "221",
+      "quantiles": {
+        "0.99": "0.002932024",
+        "0.9": "0.0010912200000000002",
+        "0.5": "0.000683806"
+      },
+      "labels": {
+        "result": "success",
+        "collector": "netdev"
+      }
+    },
+    {
+      "sum": "0.2014717299999999",
+      "count": "221",
+      "quantiles": {
+        "0.99": "0.0018525710000000001",
+        "0.9": "0.001058074",
+        "0.5": "0.00079283"
+      },
+      "labels": {
+        "result": "success",
+        "collector": "netstat"
+      }
+    },
+    {
+      "sum": "0.10189026000000001",
+      "count": "221",
+      "quantiles": {
+        "0.99": "0.000703836",
+        "0.9": "0.000434181",
+        "0.5": "0.000334803"
+      },
+      "labels": {
+        "result": "success",
+        "collector": "stat"
+      }
+    },
+    {
+      "sum": "0.0012775340000000005",
+      "count": "221",
+      "quantiles": {
+        "0.99": "2.3724000000000002e-05",
+        "0.9": "6.621000000000001e-06",
+        "0.5": "5.526e-06"
+      },
+      "labels": {
+        "result": "success",
+        "collector": "textfile"
+      }
+    },
+    {
+      "sum": "0.0050092570000000005",
+      "count": "221",
+      "quantiles": {
+        "0.99": "3.7521e-05",
+        "0.9": "2.9187e-05",
+        "0.5": "1.9647e-05"
+      },
+      "labels": {
+        "result": "success",
+        "collector": "time"
+      }
+    }
+  ],
+  "type": "SUMMARY",
+  "help": "node_exporter: Duration of a scrape job.",
+  "name": "node_exporter_scrape_duration_seconds"
+}
+{
+  "metrics": [
+    {
+      "value": "3.7806538752e+10",
+      "labels": {
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "device": "/dev/disk/by-uuid/64ecdf77-db7b-48a8-9066-abfb837f2e24"
+      }
+    },
+    {
+      "value": "5.24288e+06",
+      "labels": {
+        "mountpoint": "/run/lock",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "1.037008896e+09",
+      "labels": {
+        "mountpoint": "/run/shm",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "1.048576e+08",
+      "labels": {
+        "mountpoint": "/run/user",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "4.2424315904e+10",
+      "labels": {
+        "mountpoint": "/vagrant",
+        "fstype": "vboxsf",
+        "device": "none"
+      }
+    },
+    {
+      "value": "3.7806538752e+10",
+      "labels": {
+        "mountpoint": "/",
+        "fstype": "rootfs",
+        "device": "rootfs"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "mountpoint": "/run/rpc_pipefs",
+        "fstype": "rpc_pipefs",
+        "device": "rpc_pipefs"
+      }
+    },
+    {
+      "value": "2.07015936e+08",
+      "labels": {
+        "mountpoint": "/run",
+        "fstype": "tmpfs",
+        "device": "tmpfs"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Filesystem space available to non-root users in bytes.",
+  "name": "node_filesystem_avail"
+}
+{
+  "metrics": [
+    {
+      "value": "2.588672e+06",
+      "labels": {
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "device": "/dev/disk/by-uuid/64ecdf77-db7b-48a8-9066-abfb837f2e24"
+      }
+    },
+    {
+      "value": "253176",
+      "labels": {
+        "mountpoint": "/run/lock",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "253176",
+      "labels": {
+        "mountpoint": "/run/shm",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "253176",
+      "labels": {
+        "mountpoint": "/run/user",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "1000",
+      "labels": {
+        "mountpoint": "/vagrant",
+        "fstype": "vboxsf",
+        "device": "none"
+      }
+    },
+    {
+      "value": "2.588672e+06",
+      "labels": {
+        "mountpoint": "/",
+        "fstype": "rootfs",
+        "device": "rootfs"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "mountpoint": "/run/rpc_pipefs",
+        "fstype": "rpc_pipefs",
+        "device": "rpc_pipefs"
+      }
+    },
+    {
+      "value": "253176",
+      "labels": {
+        "mountpoint": "/run",
+        "fstype": "tmpfs",
+        "device": "tmpfs"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Filesystem total file nodes.",
+  "name": "node_filesystem_files"
+}
+{
+  "metrics": [
+    {
+      "value": "2.516101e+06",
+      "labels": {
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "device": "/dev/disk/by-uuid/64ecdf77-db7b-48a8-9066-abfb837f2e24"
+      }
+    },
+    {
+      "value": "253175",
+      "labels": {
+        "mountpoint": "/run/lock",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "253175",
+      "labels": {
+        "mountpoint": "/run/shm",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "253174",
+      "labels": {
+        "mountpoint": "/run/user",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "1000",
+      "labels": {
+        "mountpoint": "/vagrant",
+        "fstype": "vboxsf",
+        "device": "none"
+      }
+    },
+    {
+      "value": "2.516101e+06",
+      "labels": {
+        "mountpoint": "/",
+        "fstype": "rootfs",
+        "device": "rootfs"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "mountpoint": "/run/rpc_pipefs",
+        "fstype": "rpc_pipefs",
+        "device": "rpc_pipefs"
+      }
+    },
+    {
+      "value": "252832",
+      "labels": {
+        "mountpoint": "/run",
+        "fstype": "tmpfs",
+        "device": "tmpfs"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Filesystem total free file nodes.",
+  "name": "node_filesystem_files_free"
+}
+{
+  "metrics": [
+    {
+      "value": "3.9943901184e+10",
+      "labels": {
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "device": "/dev/disk/by-uuid/64ecdf77-db7b-48a8-9066-abfb837f2e24"
+      }
+    },
+    {
+      "value": "5.24288e+06",
+      "labels": {
+        "mountpoint": "/run/lock",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "1.037008896e+09",
+      "labels": {
+        "mountpoint": "/run/shm",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "1.048576e+08",
+      "labels": {
+        "mountpoint": "/run/user",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "4.2424315904e+10",
+      "labels": {
+        "mountpoint": "/vagrant",
+        "fstype": "vboxsf",
+        "device": "none"
+      }
+    },
+    {
+      "value": "3.9943901184e+10",
+      "labels": {
+        "mountpoint": "/",
+        "fstype": "rootfs",
+        "device": "rootfs"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "mountpoint": "/run/rpc_pipefs",
+        "fstype": "rpc_pipefs",
+        "device": "rpc_pipefs"
+      }
+    },
+    {
+      "value": "2.07015936e+08",
+      "labels": {
+        "mountpoint": "/run",
+        "fstype": "tmpfs",
+        "device": "tmpfs"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Filesystem free space in bytes.",
+  "name": "node_filesystem_free"
+}
+{
+  "metrics": [
+    {
+      "value": "4.1612050432e+10",
+      "labels": {
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "device": "/dev/disk/by-uuid/64ecdf77-db7b-48a8-9066-abfb837f2e24"
+      }
+    },
+    {
+      "value": "5.24288e+06",
+      "labels": {
+        "mountpoint": "/run/lock",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "1.037008896e+09",
+      "labels": {
+        "mountpoint": "/run/shm",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "1.048576e+08",
+      "labels": {
+        "mountpoint": "/run/user",
+        "fstype": "tmpfs",
+        "device": "none"
+      }
+    },
+    {
+      "value": "6.4793505792e+10",
+      "labels": {
+        "mountpoint": "/vagrant",
+        "fstype": "vboxsf",
+        "device": "none"
+      }
+    },
+    {
+      "value": "4.1612050432e+10",
+      "labels": {
+        "mountpoint": "/",
+        "fstype": "rootfs",
+        "device": "rootfs"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "mountpoint": "/run/rpc_pipefs",
+        "fstype": "rpc_pipefs",
+        "device": "rpc_pipefs"
+      }
+    },
+    {
+      "value": "2.07405056e+08",
+      "labels": {
+        "mountpoint": "/run",
+        "fstype": "tmpfs",
+        "device": "tmpfs"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Filesystem size in bytes.",
+  "name": "node_filesystem_size"
+}
+{
+  "metrics": [
+    {
+      "value": "1080"
+    }
+  ],
+  "type": "COUNTER",
+  "help": "Total number of forks.",
+  "name": "node_forks"
+}
+{
+  "metrics": [
+    {
+      "value": "91921"
+    }
+  ],
+  "type": "COUNTER",
+  "help": "Total number of interrupts serviced.",
+  "name": "node_intr"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "1m load average.",
+  "name": "node_load1"
+}
+{
+  "metrics": [
+    {
+      "value": "3.92192e+07"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Active from /proc/meminfo.",
+  "name": "node_memory_Active"
+}
+{
+  "metrics": [
+    {
+      "value": "2.0819968e+07"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Active_anon from /proc/meminfo.",
+  "name": "node_memory_Active_anon"
+}
+{
+  "metrics": [
+    {
+      "value": "1.8399232e+07"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Active_file from /proc/meminfo.",
+  "name": "node_memory_Active_file"
+}
+{
+  "metrics": [
+    {
+      "value": "8.388608e+06"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "AnonHugePages from /proc/meminfo.",
+  "name": "node_memory_AnonHugePages"
+}
+{
+  "metrics": [
+    {
+      "value": "2.0754432e+07"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "AnonPages from /proc/meminfo.",
+  "name": "node_memory_AnonPages"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Bounce from /proc/meminfo.",
+  "name": "node_memory_Bounce"
+}
+{
+  "metrics": [
+    {
+      "value": "1.2791808e+07"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Buffers from /proc/meminfo.",
+  "name": "node_memory_Buffers"
+}
+{
+  "metrics": [
+    {
+      "value": "2.25554432e+08"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Cached from /proc/meminfo.",
+  "name": "node_memory_Cached"
+}
+{
+  "metrics": [
+    {
+      "value": "1.57177856e+09"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "CommitLimit from /proc/meminfo.",
+  "name": "node_memory_CommitLimit"
+}
+{
+  "metrics": [
+    {
+      "value": "1.08027904e+08"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Committed_AS from /proc/meminfo.",
+  "name": "node_memory_Committed_AS"
+}
+{
+  "metrics": [
+    {
+      "value": "2.067791872e+09"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "DirectMap2M from /proc/meminfo.",
+  "name": "node_memory_DirectMap2M"
+}
+{
+  "metrics": [
+    {
+      "value": "5.4460416e+07"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "DirectMap4k from /proc/meminfo.",
+  "name": "node_memory_DirectMap4k"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Dirty from /proc/meminfo.",
+  "name": "node_memory_Dirty"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "HardwareCorrupted from /proc/meminfo.",
+  "name": "node_memory_HardwareCorrupted"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "HugePages_Free from /proc/meminfo.",
+  "name": "node_memory_HugePages_Free"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "HugePages_Rsvd from /proc/meminfo.",
+  "name": "node_memory_HugePages_Rsvd"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "HugePages_Surp from /proc/meminfo.",
+  "name": "node_memory_HugePages_Surp"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "HugePages_Total from /proc/meminfo.",
+  "name": "node_memory_HugePages_Total"
+}
+{
+  "metrics": [
+    {
+      "value": "2.097152e+06"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Hugepagesize from /proc/meminfo.",
+  "name": "node_memory_Hugepagesize"
+}
+{
+  "metrics": [
+    {
+      "value": "2.19840512e+08"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Inactive from /proc/meminfo.",
+  "name": "node_memory_Inactive"
+}
+{
+  "metrics": [
+    {
+      "value": "290816"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Inactive_anon from /proc/meminfo.",
+  "name": "node_memory_Inactive_anon"
+}
+{
+  "metrics": [
+    {
+      "value": "2.19549696e+08"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Inactive_file from /proc/meminfo.",
+  "name": "node_memory_Inactive_file"
+}
+{
+  "metrics": [
+    {
+      "value": "745472"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "KernelStack from /proc/meminfo.",
+  "name": "node_memory_KernelStack"
+}
+{
+  "metrics": [
+    {
+      "value": "9.306112e+06"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Mapped from /proc/meminfo.",
+  "name": "node_memory_Mapped"
+}
+{
+  "metrics": [
+    {
+      "value": "1.77094656e+09"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "MemFree from /proc/meminfo.",
+  "name": "node_memory_MemFree"
+}
+{
+  "metrics": [
+    {
+      "value": "2.074021888e+09"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "MemTotal from /proc/meminfo.",
+  "name": "node_memory_MemTotal"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Mlocked from /proc/meminfo.",
+  "name": "node_memory_Mlocked"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "NFS_Unstable from /proc/meminfo.",
+  "name": "node_memory_NFS_Unstable"
+}
+{
+  "metrics": [
+    {
+      "value": "1.601536e+06"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "PageTables from /proc/meminfo.",
+  "name": "node_memory_PageTables"
+}
+{
+  "metrics": [
+    {
+      "value": "9.580544e+06"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "SReclaimable from /proc/meminfo.",
+  "name": "node_memory_SReclaimable"
+}
+{
+  "metrics": [
+    {
+      "value": "9.027584e+06"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "SUnreclaim from /proc/meminfo.",
+  "name": "node_memory_SUnreclaim"
+}
+{
+  "metrics": [
+    {
+      "value": "393216"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Shmem from /proc/meminfo.",
+  "name": "node_memory_Shmem"
+}
+{
+  "metrics": [
+    {
+      "value": "1.8608128e+07"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Slab from /proc/meminfo.",
+  "name": "node_memory_Slab"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "SwapCached from /proc/meminfo.",
+  "name": "node_memory_SwapCached"
+}
+{
+  "metrics": [
+    {
+      "value": "5.34769664e+08"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "SwapFree from /proc/meminfo.",
+  "name": "node_memory_SwapFree"
+}
+{
+  "metrics": [
+    {
+      "value": "5.34769664e+08"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "SwapTotal from /proc/meminfo.",
+  "name": "node_memory_SwapTotal"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Unevictable from /proc/meminfo.",
+  "name": "node_memory_Unevictable"
+}
+{
+  "metrics": [
+    {
+      "value": "3.5184337805312e+13"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "VmallocChunk from /proc/meminfo.",
+  "name": "node_memory_VmallocChunk"
+}
+{
+  "metrics": [
+    {
+      "value": "3.5184372087808e+13"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "VmallocTotal from /proc/meminfo.",
+  "name": "node_memory_VmallocTotal"
+}
+{
+  "metrics": [
+    {
+      "value": "2.8987392e+07"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "VmallocUsed from /proc/meminfo.",
+  "name": "node_memory_VmallocUsed"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Writeback from /proc/meminfo.",
+  "name": "node_memory_Writeback"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "WritebackTmp from /proc/meminfo.",
+  "name": "node_memory_WritebackTmp"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InAddrMaskReps from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InAddrMaskReps"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InAddrMasks from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InAddrMasks"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InCsumErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InCsumErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InDestUnreachs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InDestUnreachs"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InEchoReps from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InEchoReps"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InEchos from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InEchos"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InMsgs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InMsgs"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InParmProbs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InParmProbs"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InRedirects from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InRedirects"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InSrcQuenchs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InSrcQuenchs"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InTimeExcds from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InTimeExcds"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InTimestampReps from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InTimestampReps"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp InTimestamps from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_InTimestamps"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutAddrMaskReps from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutAddrMaskReps"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutAddrMasks from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutAddrMasks"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutDestUnreachs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutDestUnreachs"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutEchoReps from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutEchoReps"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutEchos from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutEchos"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutMsgs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutMsgs"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutParmProbs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutParmProbs"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutRedirects from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutRedirects"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutSrcQuenchs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutSrcQuenchs"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutTimeExcds from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutTimeExcds"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutTimestampReps from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutTimestampReps"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Icmp OutTimestamps from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Icmp_OutTimestamps"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt InBcastOctets from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_InBcastOctets"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt InBcastPkts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_InBcastPkts"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt InCEPkts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_InCEPkts"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt InCsumErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_InCsumErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt InECT0Pkts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_InECT0Pkts"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt InECT1Pkts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_InECT1Pkts"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt InMcastOctets from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_InMcastOctets"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt InMcastPkts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_InMcastPkts"
+}
+{
+  "metrics": [
+    {
+      "value": "2133"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt InNoECTPkts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_InNoECTPkts"
+}
+{
+  "metrics": [
+    {
+      "value": "7"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt InNoRoutes from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_InNoRoutes"
+}
+{
+  "metrics": [
+    {
+      "value": "188183"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt InOctets from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_InOctets"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt InTruncatedPkts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_InTruncatedPkts"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt OutBcastOctets from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_OutBcastOctets"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt OutBcastPkts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_OutBcastPkts"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt OutMcastOctets from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_OutMcastOctets"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt OutMcastPkts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_OutMcastPkts"
+}
+{
+  "metrics": [
+    {
+      "value": "1.528912e+06"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "IpExt OutOctets from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_IpExt_OutOctets"
+}
+{
+  "metrics": [
+    {
+      "value": "64"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip DefaultTTL from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_DefaultTTL"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip ForwDatagrams from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_ForwDatagrams"
+}
+{
+  "metrics": [
+    {
+      "value": "2"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip Forwarding from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_Forwarding"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip FragCreates from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_FragCreates"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip FragFails from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_FragFails"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip FragOKs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_FragOKs"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip InAddrErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_InAddrErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "2124"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip InDelivers from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_InDelivers"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip InDiscards from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_InDiscards"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip InHdrErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_InHdrErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "2131"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip InReceives from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_InReceives"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip InUnknownProtos from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_InUnknownProtos"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip OutDiscards from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_OutDiscards"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip OutNoRoutes from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_OutNoRoutes"
+}
+{
+  "metrics": [
+    {
+      "value": "1993"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip OutRequests from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_OutRequests"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip ReasmFails from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_ReasmFails"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip ReasmOKs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_ReasmOKs"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip ReasmReqds from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_ReasmReqds"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Ip ReasmTimeout from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Ip_ReasmTimeout"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt ArpFilter from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_ArpFilter"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt BusyPollRxPackets from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_BusyPollRxPackets"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt DelayedACKLocked from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_DelayedACKLocked"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt DelayedACKLost from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_DelayedACKLost"
+}
+{
+  "metrics": [
+    {
+      "value": "5"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt DelayedACKs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_DelayedACKs"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt EmbryonicRsts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_EmbryonicRsts"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt IPReversePathFilter from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_IPReversePathFilter"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt ListenDrops from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_ListenDrops"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt ListenOverflows from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_ListenOverflows"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt LockDroppedIcmps from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_LockDroppedIcmps"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt OfoPruned from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_OfoPruned"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt OutOfWindowIcmps from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_OutOfWindowIcmps"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt PAWSActive from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_PAWSActive"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt PAWSEstab from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_PAWSEstab"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt PAWSPassive from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_PAWSPassive"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt PruneCalled from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_PruneCalled"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt RcvPruned from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_RcvPruned"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt SyncookiesFailed from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_SyncookiesFailed"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt SyncookiesRecv from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_SyncookiesRecv"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt SyncookiesSent from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_SyncookiesSent"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPAbortFailed from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPAbortFailed"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPAbortOnClose from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPAbortOnClose"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPAbortOnData from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPAbortOnData"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPAbortOnLinger from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPAbortOnLinger"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPAbortOnMemory from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPAbortOnMemory"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPAbortOnTimeout from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPAbortOnTimeout"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPBacklogDrop from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPBacklogDrop"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPChallengeACK from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPChallengeACK"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPDSACKIgnoredNoUndo from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPDSACKIgnoredNoUndo"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPDSACKIgnoredOld from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPDSACKIgnoredOld"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPDSACKOfoRecv from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPDSACKOfoRecv"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPDSACKOfoSent from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPDSACKOfoSent"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPDSACKOldSent from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPDSACKOldSent"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPDSACKRecv from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPDSACKRecv"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPDSACKUndo from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPDSACKUndo"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPDeferAcceptDrop from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPDeferAcceptDrop"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPDirectCopyFromBacklog from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPDirectCopyFromBacklog"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPDirectCopyFromPrequeue from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPDirectCopyFromPrequeue"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPFACKReorder from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPFACKReorder"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPFastOpenActive from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPFastOpenActive"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPFastOpenCookieReqd from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPFastOpenCookieReqd"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPFastOpenListenOverflow from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPFastOpenListenOverflow"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPFastOpenPassive from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPFastOpenPassive"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPFastOpenPassiveFail from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPFastOpenPassiveFail"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPFastRetrans from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPFastRetrans"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPForwardRetrans from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPForwardRetrans"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPFullUndo from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPFullUndo"
+}
+{
+  "metrics": [
+    {
+      "value": "806"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPHPAcks from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPHPAcks"
+}
+{
+  "metrics": [
+    {
+      "value": "109"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPHPHits from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPHPHits"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPHPHitsToUser from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPHPHitsToUser"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPLossFailures from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPLossFailures"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPLossProbeRecovery from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPLossProbeRecovery"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPLossProbes from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPLossProbes"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPLossUndo from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPLossUndo"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPLostRetransmit from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPLostRetransmit"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPMD5NotFound from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPMD5NotFound"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPMD5Unexpected from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPMD5Unexpected"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPMemoryPressures from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPMemoryPressures"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPMinTTLDrop from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPMinTTLDrop"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPOFODrop from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPOFODrop"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPOFOMerge from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPOFOMerge"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPOFOQueue from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPOFOQueue"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPPartialUndo from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPPartialUndo"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPPrequeueDropped from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPPrequeueDropped"
+}
+{
+  "metrics": [
+    {
+      "value": "1"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPPrequeued from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPPrequeued"
+}
+{
+  "metrics": [
+    {
+      "value": "489"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPPureAcks from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPPureAcks"
+}
+{
+  "metrics": [
+    {
+      "value": "1"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPRcvCoalesce from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPRcvCoalesce"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPRcvCollapsed from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPRcvCollapsed"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPRenoFailures from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPRenoFailures"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPRenoRecovery from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPRenoRecovery"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPRenoRecoveryFail from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPRenoRecoveryFail"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPRenoReorder from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPRenoReorder"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPReqQFullDoCookies from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPReqQFullDoCookies"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPReqQFullDrop from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPReqQFullDrop"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPRetransFail from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPRetransFail"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSACKDiscard from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSACKDiscard"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSACKReneging from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSACKReneging"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSACKReorder from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSACKReorder"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSYNChallenge from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSYNChallenge"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSackFailures from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSackFailures"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSackMerged from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSackMerged"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSackRecovery from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSackRecovery"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSackRecoveryFail from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSackRecoveryFail"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSackShiftFallback from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSackShiftFallback"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSackShifted from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSackShifted"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSchedulerFailed from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSchedulerFailed"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSlowStartRetrans from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSlowStartRetrans"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSpuriousRTOs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSpuriousRTOs"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPSpuriousRtxHostQueues from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPSpuriousRtxHostQueues"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPTSReorder from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPTSReorder"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPTimeWaitOverflow from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPTimeWaitOverflow"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TCPTimeouts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TCPTimeouts"
+}
+{
+  "metrics": [
+    {
+      "value": "213"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TW from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TW"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TWKilled from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TWKilled"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "TcpExt TWRecycled from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_TcpExt_TWRecycled"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp ActiveOpens from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_ActiveOpens"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp AttemptFails from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_AttemptFails"
+}
+{
+  "metrics": [
+    {
+      "value": "1"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp CurrEstab from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_CurrEstab"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp EstabResets from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_EstabResets"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp InCsumErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_InCsumErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp InErrs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_InErrs"
+}
+{
+  "metrics": [
+    {
+      "value": "2104"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp InSegs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_InSegs"
+}
+{
+  "metrics": [
+    {
+      "value": "-1"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp MaxConn from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_MaxConn"
+}
+{
+  "metrics": [
+    {
+      "value": "5"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp OutRsts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_OutRsts"
+}
+{
+  "metrics": [
+    {
+      "value": "2194"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp OutSegs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_OutSegs"
+}
+{
+  "metrics": [
+    {
+      "value": "224"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp PassiveOpens from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_PassiveOpens"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp RetransSegs from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_RetransSegs"
+}
+{
+  "metrics": [
+    {
+      "value": "1"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp RtoAlgorithm from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_RtoAlgorithm"
+}
+{
+  "metrics": [
+    {
+      "value": "120000"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp RtoMax from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_RtoMax"
+}
+{
+  "metrics": [
+    {
+      "value": "200"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Tcp RtoMin from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Tcp_RtoMin"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "UdpLite InCsumErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_UdpLite_InCsumErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "UdpLite InDatagrams from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_UdpLite_InDatagrams"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "UdpLite InErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_UdpLite_InErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "UdpLite NoPorts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_UdpLite_NoPorts"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "UdpLite OutDatagrams from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_UdpLite_OutDatagrams"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "UdpLite RcvbufErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_UdpLite_RcvbufErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "UdpLite SndbufErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_UdpLite_SndbufErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Udp InCsumErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Udp_InCsumErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "20"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Udp InDatagrams from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Udp_InDatagrams"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Udp InErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Udp_InErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Udp NoPorts from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Udp_NoPorts"
+}
+{
+  "metrics": [
+    {
+      "value": "20"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Udp OutDatagrams from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Udp_OutDatagrams"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Udp RcvbufErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Udp_RcvbufErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Udp SndbufErrors from /proc/net/{netstat,snmp}.",
+  "name": "node_netstat_Udp_SndbufErrors"
+}
+{
+  "metrics": [
+    {
+      "value": "218245",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "bytes receive from /proc/net/dev.",
+  "name": "node_network_receive_bytes"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "compressed receive from /proc/net/dev.",
+  "name": "node_network_receive_compressed"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "drop receive from /proc/net/dev.",
+  "name": "node_network_receive_drop"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "errs receive from /proc/net/dev.",
+  "name": "node_network_receive_errs"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "fifo receive from /proc/net/dev.",
+  "name": "node_network_receive_fifo"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "frame receive from /proc/net/dev.",
+  "name": "node_network_receive_frame"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "multicast receive from /proc/net/dev.",
+  "name": "node_network_receive_multicast"
+}
+{
+  "metrics": [
+    {
+      "value": "2135",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "packets receive from /proc/net/dev.",
+  "name": "node_network_receive_packets"
+}
+{
+  "metrics": [
+    {
+      "value": "1.889652e+06",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "bytes transmit from /proc/net/dev.",
+  "name": "node_network_transmit_bytes"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "compressed transmit from /proc/net/dev.",
+  "name": "node_network_transmit_compressed"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "drop transmit from /proc/net/dev.",
+  "name": "node_network_transmit_drop"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "errs transmit from /proc/net/dev.",
+  "name": "node_network_transmit_errs"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "fifo transmit from /proc/net/dev.",
+  "name": "node_network_transmit_fifo"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "frame transmit from /proc/net/dev.",
+  "name": "node_network_transmit_frame"
+}
+{
+  "metrics": [
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "multicast transmit from /proc/net/dev.",
+  "name": "node_network_transmit_multicast"
+}
+{
+  "metrics": [
+    {
+      "value": "2228",
+      "labels": {
+        "device": "eth0"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth1"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth2"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "eth3"
+      }
+    },
+    {
+      "value": "0",
+      "labels": {
+        "device": "lo"
+      }
+    }
+  ],
+  "type": "GAUGE",
+  "help": "packets transmit from /proc/net/dev.",
+  "name": "node_network_transmit_packets"
+}
+{
+  "metrics": [
+    {
+      "value": "0"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Number of processes blocked waiting for I/O to complete.",
+  "name": "node_procs_blocked"
+}
+{
+  "metrics": [
+    {
+      "value": "2"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Number of processes in runnable state.",
+  "name": "node_procs_running"
+}
+{
+  "metrics": [
+    {
+      "value": "1.459101713e+09"
+    }
+  ],
+  "type": "COUNTER",
+  "help": "System time in seconds since epoch (1970).",
+  "name": "node_time"
+}
+{
+  "metrics": [
+    {
+      "value": "5.54"
+    }
+  ],
+  "type": "COUNTER",
+  "help": "Total user and system CPU time spent in seconds.",
+  "name": "process_cpu_seconds_total"
+}
+{
+  "metrics": [
+    {
+      "value": "1024"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Maximum number of open file descriptors.",
+  "name": "process_max_fds"
+}
+{
+  "metrics": [
+    {
+      "value": "7"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Number of open file descriptors.",
+  "name": "process_open_fds"
+}
+{
+  "metrics": [
+    {
+      "value": "1.3828096e+07"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Resident memory size in bytes.",
+  "name": "process_resident_memory_bytes"
+}
+{
+  "metrics": [
+    {
+      "value": "1.45909845681e+09"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Start time of the process since unix epoch in seconds.",
+  "name": "process_start_time_seconds"
+}
+{
+  "metrics": [
+    {
+      "value": "1.92475136e+08"
+    }
+  ],
+  "type": "GAUGE",
+  "help": "Virtual memory size in bytes.",
+  "name": "process_virtual_memory_bytes"
+}
