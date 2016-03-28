@@ -17,16 +17,29 @@ echo "Hello"
 echo " This Program will allow you to send a group of query to the node you are monitoring and store the response 
 in a JSON file created dynamically as file1, file2, file3, etc. "
 
+echo "Insert the mode number : 
+
+1: JSONP file
+2: JSON file
+3: CSV file
+
+"
+read -p "Your choice ==> " OPTION
+
 echo "Insert the host address : <host> "
-#read -p "Your choice ==> " HOST
+read -p "Your choice ==> " HOST
 
 
 echo "Insert the port : <port> "
-#read -p "Your choice ==> " PORT
+read -p "Your choice ==> " PORT
+
+echo "Insert scrapping interval in minutes : <port> "
+read -p "Your choice ==> " INTERVAL
 
 
 echo "
-The address is $HOST:$PORT  Thank you 
+The address is $HOST:$PORT  with scapping interval of $INTERVAL min.
+Thank you 
 " 
 }
 
@@ -85,6 +98,10 @@ esac
 ###############################################
 function commands_api_option_one() {
 
+HOST=$1 
+PORT=$2 
+INTERVAL=$3 
+
 LINE_NUM=1
 INDEX=1
 INDEX_FILE=1
@@ -106,7 +123,7 @@ OUTPUT_FILE="data/file${INDEX_FILE}.json"
 					"
 					touch  ${OUTPUT_FILE}
 
-					$( ${GOPATH}/bin/prom2json  http://192.168.50.1:7071/metrics | jq '.[]|select(.name=='''$LINE''')'  > $OUTPUT_FILE ) 
+					$( ${GOPATH}/bin/prom2json  http://${HOST}:${PORT}/metrics | jq '.[]|select(.name=='''$LINE''')'  > $OUTPUT_FILE ) 
  					
 					break
 
@@ -144,21 +161,24 @@ done < ./metrics-inputs
 
 
 function commands_api_option_two() {
-# CMD_RET=$(curl -g 'http://localhost:9090/api/v1/series?match[]=up&match[]=go_memstats_next_gc_bytes{job="prometheus"}')
-# CMD_RET=$(curl -g 'http://localhost:9090/api/v1/label/job/values')
-# CMD_RET=$(curl 'http://localhost:9090/api/v1/query_range?query=up&start=2016-03-25T23:20:00.000Z&end=2016-03-25T23:32:00.000Z&step=15s')
+
+
+HOST=$1 
+PORT=$2 
+INTERVAL=$3 
 
 INDEX_FILE="1"
+INDEX="1"
 OUTPUT_FILE="file${INDEX_FILE}.json"
 # date --rfc-3339=ns --utc --universal
 
 LOCAL_INTERVAL_MINUTES=$1
 
-LOCAL_CMD_RET=$(curl -g 'http://localhost:9090/api/v1/query_range?query=up&start=2016-03-25T22:32:33.641Z&end=2016-03-25T22:52:33.641Z&step=15s -o data/${OUTPUT_FILE} > error.log')
+LOCAL_CMD_RET=$(curl -g 'http://'$HOST':'$PORT'/api/v1/query_range?query=up&start=2016-03-25T22:32:33.641Z&end=2016-03-25T22:52:33.641Z&step='$INTERVAL's -o data/${OUTPUT_FILE} > error.log')
 
 
 
-INDEX="1"
+
 set_time  "STD" $LOCAL_INTERVAL_MINUTES
 set_time "ADD" $LOCAL_INTERVAL_MINUTES
 
@@ -180,7 +200,7 @@ OUTPUT_FILE="data/file${INDEX_FILE}.json"
 					do
 					if [  ! -e $OUTPUT_FILE ]; then 
 					echo "create file data/$OUTPUT_FILE"
-					touch  "data/"${OUTPUT_FILE}
+					touch  ${OUTPUT_FILE}
 					echo " 
 					The output file of the API request $LINE is in ===> data/$OUTPUT_FILE  
 					"
@@ -202,6 +222,62 @@ OUTPUT_FILE="data/file${INDEX_FILE}.json"
 ((INDEX++))
 ((LINE_NUM++))
 done < ./metrics-inputs
+
+}
+
+##############################################################################################
+##############################################################################################
+############# Option 3: Write metrics into CSV File  #########################################
+##############################################################################################
+##############################################################################################
+function commands_api_option_three() {
+
+# get the HOST address 
+HOST=$1 
+# get the HOST port
+PORT=$2 
+# get The interval in seconds
+INTERVAL=$3 
+# Index for searching and naming files
+INDEX_FILE="1"
+# index
+INDEX="1"
+# Unix timestamp of NOW
+NOW_UNIX_TIME=$(date +%s)
+
+
+LINE_NUM=1
+while read LINE 
+do
+
+echo "the raw metric used is: ==>      $INDEX : $LINE 
+"
+
+OUTPUT_FILE="data/file${INDEX_FILE}.csv"
+
+					while true
+					do
+					if [  ! -e $OUTPUT_FILE ]; then 
+					echo "create file $OUTPUT_FILE"
+					touch  ${OUTPUT_FILE}
+					echo " 
+					The output file of the API request $LINE is in ===> data/$OUTPUT_FILE  
+					"
+
+					$(./prometheus_cli -csv=true -server="http://$HOST:$PORT"   query_range node_network_transmit_packets $NOW_UNIX_TIME $INTERVAL > $OUTPUT_FILE)
+
+					break
+
+					else
+					((INDEX_FILE++))
+					OUTPUT_FILE="data/file${INDEX_FILE}.csv"
+					fi
+					done
+
+
+((INDEX++))
+((LINE_NUM++))
+done < ./metrics-inputs-csv
 
 }
 
@@ -243,9 +319,28 @@ done
 
 
 
-start $1
-#commands_api_option_two $1 $OPTION
-commands_api_option_one $1 $OPTION
+start 
+#
+
+
+
+case $OPTION in
+1*)
+
+commands_api_option_one $HOST $PORT $INTERVAL 
+  ;;
+2*)
+commands_api_option_two $HOST $PORT $INTERVAL
+  ;;
+3*)
+  
+commands_api_option_three $HOST $PORT $INTERVAL
+  ;;
+*)
+  echo "Option not supported yet !"
+  ;;
+esac
+
 
 
 exit 0
